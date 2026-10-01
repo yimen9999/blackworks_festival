@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival Blackworks Madrid | Tickets</title>
 
-    <link rel="stylesheet" href="css/tickets.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <!-- tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,10 +14,48 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
+
   <body>
     <!-- nav -->
-     <!-- primer paso de compra -->
+    <header class="navbar">
+      <button class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="index.html" class="logo">
+        <img src="img/logoPrincipal.png" alt="Blackworks" />
+      </a>
+
+      <a href="tickets.html" class="entradas">ENTRADAS</a>
+    </header>
+
+    <!-- menuhamburguesa -->
+
+    <div class="menuhamburguesa">
+      <div class="menu-arriba">
+        <button class="menu-cerrar">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+
+        <a href="index.html" class="menu-logo">
+          <img src="img/logoPrincipal.png" alt="Blackworks" />
+        </a>
+      </div>
+
+      <nav class="menuopciones">
+        <a href="tickets.html">TICKETS</a>
+        <a href="#merch">MERCHANDISE</a>
+        <a href="https://blackworks.es/events/">MÁS EVENTOS</a>
+        <a href="https://blackworks.es/about-us/">ABOUT</a>
+      </nav>
+    </div>
+
+    <!-- primer paso de compra -->
     <!-- nav para compra de entradas -->
     <nav class="steps" aria-label="Pasos de compra">
       <span class="step is-active" aria-current="step">1.Entradas</span>
@@ -27,65 +66,133 @@
     <section class="section" id="tickets">
       <div class="container tickets">
         <ul class="tickets">
-            <!--  ticket vip -->
-        <li class="ticket vip" data-id="vip" data-nombre="Entrada VIP">
-        <div class="ticket-main">
-      <h2>Entrada VIP - 120€</h2>
-      <button class="btn-add" type="button">Añadir</button>
-      <p>Acceso exclusivo durante los dos días del festival, con entrada prioritaria, acceso a zona VIP, barras y baños exclusivos
-         y áreas de descanso. Disfruta del festival desde una perspectiva privilegiada y con todas las comodidades. </p>
-    </div>
-    <div class="ticket-stub">
-        <img src="img/VIPlogo.png" alt="" />"
-    </div>
-  </li>
-  <!--  ticket general -->
-   <li class="ticket general" data-id="general" data-nombre="Entrada General">
-        <div class="ticket-main">
-      <h2>Entrada General - 70€</h2>
-      <button class="btn-add" type="button">Añadir</button>
-      <p>Acceso durante los dos días del festival y a todas las áreas generales del recinto. 
-        Disfruta de la programación completa, los diferentes escenarios y toda la experiencia Blackworks.
-    </div>
-    <div class="ticket-stub">
-        <img src="img/GENERALlogo.png" alt="" />"
-    </div>
-  </li>
-<!-- entrada de 1 día -->
- <li class="ticket 1-dia" data-id="1-dia" data-nombre="Entrada 1 Día">
-        <div class="ticket-main">
-      <h2>Entrada 1 Día - 40€</h2>
-      <button class="btn-add" type="button">Añadir</button>
-      <p>Acceso durante uno de los dos días del festival y a todas las áreas generales del recinto. 
-        Disfruta de los diferentes escenarios y de toda la programación del día seleccionado.</p>
-        </div>
-    <div class="ticket-stub">
-        <img src="img/DAYlogo.png" alt="" />"
-    </div>
-  </li>
-  <!-- bonocopas -->
-   <li class="bonocopas" data-id="bonocopas" data-nombre="Bonocopas">
-        <div class="ticket-main">
-      <h2>Bonocopas - 45€</h2>
-      <button class="btn-add" type="button">Añadir</button>
-      <p>>Disfruta de tus bebidas durante el festival con un bono de copas que incluye varias consumiciones 
-      y te permite ahorrar frente a la compra individual. Canjeable en las barras del recinto durante el evento.</p>
-        </div>
-    <div class="ticket-stub">
-        <img src="img/BONOlogo.png" alt="" />"
-    </div>
-  </li>
-     </ul>
+          <!--  ticket vip -->
+          <li
+            class="ticket vip"
+            data-id="vip"
+            data-nombre="Entrada VIP"
+            data-precio="120"
+          >
+            <div class="ticket-main">
+              <h2>Entrada VIP - 120€</h2>
+              <button class="btn-add" type="button">Añadir</button>
+              <p>
+                Acceso exclusivo durante los dos días del festival, con entrada
+                prioritaria, acceso a zona VIP, barras y baños exclusivos y
+                áreas de descanso. Disfruta del festival desde una perspectiva
+                privilegiada y con todas las comodidades.
+              </p>
+            </div>
+            <div class="ticket-stub"><img src="img/VIPlogo.png" alt="" />"</div>
+          </li>
+          <!--  ticket general -->
+          <li
+            class="ticket general"
+            data-id="general"
+            data-nombre="Entrada General"
+            data-precio="70"
+          >
+            <div class="ticket-main">
+              <h2>Entrada General - 70€</h2>
+              <button class="btn-add" type="button">Añadir</button>
+              <p>
+                Acceso durante los dos días del festival y a todas las áreas
+                generales del recinto. Disfruta de la programación completa, los
+                diferentes escenarios y toda la experiencia Blackworks.
+              </p>
+            </div>
+            <div class="ticket-stub">
+              <img src="img/GENERALlogo.png" alt="" />"
+            </div>
+          </li>
+          <!-- entrada de 1 día -->
+          <li
+            class="ticket 1-dia"
+            data-id="1-dia"
+            data-nombre="Entrada 1 Día"
+            data-precio="40"
+          >
+            <div class="ticket-main">
+              <h2>Entrada 1 Día - 40€</h2>
+              <button class="btn-add" type="button">Añadir</button>
+              <p>
+                Acceso durante uno de los dos días del festival y a todas las
+                áreas generales del recinto. Disfruta de los diferentes
+                escenarios y de toda la programación del día seleccionado.
+              </p>
+            </div>
+            <div class="ticket-stub"><img src="img/DAYlogo.png" alt="" />"</div>
+          </li>
+          <!-- bonocopas -->
+          <li
+            class="bonocopas"
+            data-id="bonocopas"
+            data-nombre="Bonocopas"
+            data-precio="45"
+          >
+            <div class="ticket-main">
+              <h2>Bonocopas - 45€</h2>
+              <button class="btn-add" type="button">Añadir</button>
+              <p>
+                >Disfruta de tus bebidas durante el festival con un bono de
+                copas que incluye varias consumiciones y te permite ahorrar
+                frente a la compra individual. Canjeable en las barras del
+                recinto durante el evento.
+              </p>
+            </div>
+            <div class="ticket-stub">
+              <img src="img/BONOlogo.png" alt="" />"
+            </div>
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <!-- segundo paso de compra -->
-       <!-- nav para compra de entradas -->
-    <nav class="steps" aria-label="Pasos de compra">
-      <span class="step is-active" aria-current="step">1.Entradas</span>
-      <span class="step">2.Datos personales</span>
-      <span class="step">3.Confirmación</span>
-    </nav>
+    <section class="section" id="fase1">
+      <div class="formulario">
+        <input type="text" id="nombre" placeholder="Nombre y apellidos" />
+        <input type="email" id="correo" placeholder="Correo electrónico" />
+        <div class="cantidad">
+          <label>Total de entradas</label>
+          <div class="controles">
+            <button id="restar">-</button>
+            <span id="contador">1</span>
+            <button id="sumar">+</button>
+          </div>
+        </div>
 
+        <div class="total">
+          Precio total:
+          <span id="preciototal">15€</span>
+        </div>
+      </div>
+    </section>
 
+       <section class="fase" id="fase4">
+            <h2>Gracias por tu compra</h2>
+            <div class="tarjeta">
+              <div class="imagenfinal">
+                <img src="img/imagenfinal.jpg" alt="Final" />
+              </div>
+              <div class="textofinal">
+                <h3 id="titulofinal"></h3>
+                <div id="datosfinal"></div>
+              </div>
+              <div class="gracias">
+                <h1 > Entrada confirmada</h1>
+                <p>Tu acceso a BLACKWORKS WEEKEND FESTIVAL está asegurado.Dos días.
+                   Una misma frecuencia.Prepárate para el hard techno, hardcore, newstyle y rave.</p>
+              </div>
+              <div class="codigo">
+                <img src="img/codigo.png" alt="QR" />
+                <button class="descargapdf">Descargar PDF</button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+    <!-- segundo paso de compra -->
+    <!-- enlace js -->
+    <script src="javascript.js"></script>
   </body>
 </html>
