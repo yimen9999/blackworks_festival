@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menu");
     const menuHamburguesa = document.querySelector(".menuhamburguesa");
     const menuCerrar = document.querySelector(".menu-cerrar");
-    const menuEnlaces = document.querySelectorAll(".menuopciones a");
+    const merch = document.querySelector('a[href="#merch"]');
 
     menu.addEventListener("click", function () {
         menuHamburguesa.style.display = "block";
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         menuHamburguesa.style.display = "none";
     });
 
-    menuEnlaces.forEach(function (enlace) {
-        enlace.addEventListener("click", function () {
+    merch.addEventListener("click", function () {
+        setTimeout(function () {
             menuHamburguesa.style.display = "none";
-        });
+        }, 500);
     });
 
 });

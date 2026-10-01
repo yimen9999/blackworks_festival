@@ -96,10 +96,166 @@ img {
   border-radius: var(--radio-boton);
 }
 
-.home {
-  padding-top: var(--nav-height);
+
+/* DESPLEGABLE BURGER */
+.menuhamburguesa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  z-index: 2000;
+  display: none;
 }
 
+.menu-arriba {
+  position: relative;
+  height: var(--nav-height);
+}
+
+.menu-cerrar {
+  position: absolute;
+  left: 24px;
+  top: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--primary-color);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.menu-logo {
+  position: absolute;
+  left: 50%;
+  top: 23px;
+  transform: translateX(-50%);
+}
+
+.menu-logo img {
+  width: 320px;
+}
+
+.menuopciones {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin-top: 20px;
+}
+
+.menuopciones a {
+  font-family: var(--secundary-font);
+  font-size: 70px;
+  color: var(--primary-color);
+  margin-bottom: 18px;
+}
+
+/* HOME */
+
+.home {
+    padding-top: var(--nav-height);
+    position: relative;
+
+}
+
+.home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+}
+
+.home-texto p:first-child {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.home-texto h1 {
+  font-family: var(--secundary-font);
+  font-size: 70px;
+  color: var(--white);
+}
+
+.home-texto p:last-child {
+  font-size: 24px;
+  font-weight: 450;
+  margin-top: 10px;
+}
+
+/* CARRUSEL TICKETS */
+
+.ticketscarrusel {
+  background-color: var(--secondary-color);
+  overflow: hidden;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.ticketscarrusel-texto {
+  display: flex;
+  width: max-content;
+  animation: moverTickets 15s linear infinite;
+}
+
+.ticketscarrusel-grupo {
+  display: flex;
+  gap: 60px;
+  padding-right: 60px;
+}
+
+@keyframes moverTickets {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ticketscarrusel-texto span {
+  font-family: var(--primary-font);
+  font-size: 40px;
+  color: var(--primary-color);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LUZZZZZZ */
 /* pagina de tickets.................................................... */
 /* * botones */
 .btn-add,
@@ -160,103 +316,4 @@ img {
 .step.is-active {
   background: transparent;
   color: var(--secondary-color);
-}
-/* nav */
-
-.navbar {
-  height: var(--nav-height);
-  background-color: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.menu {
-  background: none;
-  border: none;
-  padding: 0;
-  color: var(--primary-color);
-  font-size: 35px;
-  cursor: pointer;
-}
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logo img {
-  width: 320px;
-}
-
-.entradas {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  font-weight: 700;
-  font-size: 15px;
-  padding: var(--padding-boton);
-  border-radius: var(--radio-boton);
-}
-
-.home {
-  padding-top: var(--nav-height);
-}
-
-.menuhamburguesa {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--secondary-color);
-  z-index: 2000;
-  display: none;
-}
-
-.menu-arriba {
-  position: relative;
-  height: var(--nav-height);
-}
-
-.menu-cerrar {
-  position: absolute;
-  left: 24px;
-  top: 30px;
-  background: none;
-  border: none;
-  padding: 0;
-  color: var(--primary-color);
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.menu-logo {
-  position: absolute;
-  left: 50%;
-  top: 23px;
-  transform: translateX(-50%);
-}
-
-.menu-logo img {
-  width: 320px;
-}
-
-.menuopciones {
-  display: flex;
-  flex-direction: column;
-  margin-left: 24px;
-  margin-top: 20px;
-}
-
-.menuopciones a {
-  font-family: var(--secundary-font);
-  font-size: 70px;
-  color: var(--primary-color);
-  margin-bottom: 18px;
 }
