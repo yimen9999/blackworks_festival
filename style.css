@@ -138,8 +138,8 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 24px 20px;
-  /* /* position: sticky; */
+  padding: calc(var(--nav-height) + 24px) 20px 24px;
+  /* position: sticky; */
 }
 
 .step {
