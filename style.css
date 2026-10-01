@@ -3,6 +3,7 @@
   --secondary-color: #000;
   --ticketblue: #4a5476;
   --ticketred: #6b0300;
+  --white: #fff;
   --primary-font: "Montserrat", sans-serif;
   --secundary-font: "Anton", sans-serif;
   --radio-boton: 30px; /* radio TODOS los botones */
@@ -22,11 +23,75 @@ body {
   /* color: #000; */
 }
 
+/* los anclas no quedan tapadas por el menú fijo */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
+/* botones */
+.btn-add,
+.descargapdf {
+  border: 0;
+  border-radius: var(--radio-boton);
+  padding: var(--padding-boton);
+  font-family: var(--primary-font);
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 
+.btn-vip {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-general {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-undia {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-bonocopas {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+/* nav de guia de pasos en la compra  */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 20px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px 14px;
+  border: 3px solid var(--secondary-color);
+  border-radius: var(--radio-boton);
+  background: var(--secondary-color);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* paso actual: contorno negro y fondo rojo */
+.step.is-active {
+  background: transparent;
+  color: var(--secondary-color);
+}
 /* nav */
 
 .navbar {

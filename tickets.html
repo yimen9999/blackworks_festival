@@ -74,7 +74,7 @@
           >
             <div class="ticket-main">
               <h2>Entrada VIP - 120€</h2>
-              <button class="btn-add" type="button">Añadir</button>
+              <button class="btn-add btn-vip" type="button">Añadir</button>
               <p>
                 Acceso exclusivo durante los dos días del festival, con entrada
                 prioritaria, acceso a zona VIP, barras y baños exclusivos y
@@ -93,7 +93,7 @@
           >
             <div class="ticket-main">
               <h2>Entrada General - 70€</h2>
-              <button class="btn-add" type="button">Añadir</button>
+              <button class="btn-add btn-general" type="button">Añadir</button>
               <p>
                 Acceso durante los dos días del festival y a todas las áreas
                 generales del recinto. Disfruta de la programación completa, los
@@ -107,14 +107,14 @@
 
           <!-- entrada de 1 día -->
           <li
-            class="ticket 1-dia"
+            class="ticket-dia"
             data-id="undia"
             data-nombre="Entrada 1 Día"
             data-precio="40"
           >
             <div class="ticket-main">
               <h2>Entrada 1 Día - 40€</h2>
-              <button class="btn-add" type="button">Añadir</button>
+              <button class="btn-add btn-undia" type="button">Añadir</button>
               <p>
                 Acceso durante uno de los dos días del festival y a todas las
                 áreas generales del recinto. Disfruta de los diferentes
@@ -133,7 +133,7 @@
           >
             <div class="ticket-main">
               <h2>Bonocopas - 45€</h2>
-              <button class="btn-add" type="button">Añadir</button>
+              <button class="btn-add btn-bonocopas" type="button">Añadir</button>
               <p>
                 Disfruta de tus bebidas durante el festival con un bono de copas
                 que incluye varias consumiciones y te permite ahorrar frente a
@@ -170,7 +170,6 @@
     </section>
 
     <section class="fase" id="fase2">
-      <h2>Gracias por tu compra</h2>
       <div class="tarjeta">
         <div class="imagenfinal">
           <img src="img/imagenfinal.jpg" alt="Final" />
@@ -193,6 +192,15 @@
         </div>
       </div>
     </section>
+
+    <!-- botones de siguiente-anterior -->
+
+    <div class="navegacion" id="navegacioncompra">
+          <button id="anterior" class="boton oculto">Atrás</button>
+          <button id="siguiente" class="boton">Siguiente</button>
+        </div>
+      </section>
+    </main>
 
     <!-- enlace js -->
     <script src="javascript.js"></script>
