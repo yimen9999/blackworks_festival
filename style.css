@@ -27,7 +27,7 @@ body {
 body {
   font-family: var(--primary-font);
   background-color: var(--primary-color);
-  
+
   /* color: #000; */
 }
 
@@ -43,12 +43,12 @@ a {
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* nav */
@@ -139,7 +139,7 @@ img {
   gap: 12px;
   padding: 24px 20px;
   /* /* position: sticky; */
-} 
+}
 
 .step {
   flex: 1;
@@ -160,5 +160,3 @@ img {
   background: transparent;
   color: var(--secondary-color);
 }
-
-.tickets {
