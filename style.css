@@ -1,13 +1,76 @@
 .anton-regular {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #E91812;
+    color: #000;
+}
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
- 
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* nav */
+
+.navbar {
+    height: 105px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #E91812;
+    font-size: 40px;
+    cursor: pointer;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    width: 320px;
+}
+
+.entradas {
+    background-color: #E91812;
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 9px 30px;
+    border-radius: 30px;
+}
+
+.home {
+    padding-top: 105px;
 }
