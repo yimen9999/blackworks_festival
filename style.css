@@ -1,21 +1,13 @@
 :root {
   --primary-color: #e91812;
   --secondary-color: #000;
+  --ticketblue: #4a5476;
+  --ticketred: #6b0300;
   --primary-font: "Montserrat", sans-serif;
   --secundary-font: "Anton", sans-serif;
   --radio-boton: 30px; /* radio TODOS los botones */
   --padding-boton: 9px 30px; /* padding para TODOS los botones */
   --nav-height: 105px; /* altura de la barra de navegación */
-}
-.anton-regular {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
 }
 
 * {
@@ -25,7 +17,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--primary-font);
   background-color: var(--primary-color);
   /* color: #000; */
 }

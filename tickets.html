@@ -55,7 +55,6 @@
       </nav>
     </div>
 
-    <!-- primer paso de compra -->
     <!-- nav para compra de entradas -->
     <nav class="steps" aria-label="Pasos de compra">
       <span class="step is-active" aria-current="step">1.Entradas</span>
@@ -64,7 +63,7 @@
     </nav>
 
     <section class="section" id="tickets">
-      <div class="container tickets">
+      <div class="container">
         <ul class="tickets">
           <!--  ticket vip -->
           <li
@@ -83,7 +82,7 @@
                 privilegiada y con todas las comodidades.
               </p>
             </div>
-            <div class="ticket-stub"><img src="img/VIPlogo.png" alt="" />"</div>
+            <div class="ticket-stub"><img src="img/VIPlogo.png" alt="" /></div>
           </li>
           <!--  ticket general -->
           <li
@@ -102,13 +101,14 @@
               </p>
             </div>
             <div class="ticket-stub">
-              <img src="img/GENERALlogo.png" alt="" />"
+              <img src="img/GENERALlogo.png" alt="" />
             </div>
           </li>
+
           <!-- entrada de 1 día -->
           <li
             class="ticket 1-dia"
-            data-id="1-dia"
+            data-id="undia"
             data-nombre="Entrada 1 Día"
             data-precio="40"
           >
@@ -121,11 +121,12 @@
                 escenarios y de toda la programación del día seleccionado.
               </p>
             </div>
-            <div class="ticket-stub"><img src="img/DAYlogo.png" alt="" />"</div>
+            <div class="ticket-stub"><img src="img/DAYlogo.png" alt="" /></div>
           </li>
+
           <!-- bonocopas -->
           <li
-            class="bonocopas"
+            class="ticket-bonocopas"
             data-id="bonocopas"
             data-nombre="Bonocopas"
             data-precio="45"
@@ -134,14 +135,14 @@
               <h2>Bonocopas - 45€</h2>
               <button class="btn-add" type="button">Añadir</button>
               <p>
-                >Disfruta de tus bebidas durante el festival con un bono de
-                copas que incluye varias consumiciones y te permite ahorrar
-                frente a la compra individual. Canjeable en las barras del
-                recinto durante el evento.
+                Disfruta de tus bebidas durante el festival con un bono de copas
+                que incluye varias consumiciones y te permite ahorrar frente a
+                la compra individual. Canjeable en las barras del recinto
+                durante el evento.
               </p>
             </div>
             <div class="ticket-stub">
-              <img src="img/BONOlogo.png" alt="" />"
+              <img src="img/BONOlogo.png" alt="" />
             </div>
           </li>
         </ul>
@@ -163,35 +164,36 @@
 
         <div class="total">
           Precio total:
-          <span id="preciototal">15€</span>
+          <span id="preciototal"></span>
         </div>
       </div>
     </section>
 
-       <section class="fase" id="fase4">
-            <h2>Gracias por tu compra</h2>
-            <div class="tarjeta">
-              <div class="imagenfinal">
-                <img src="img/imagenfinal.jpg" alt="Final" />
-              </div>
-              <div class="textofinal">
-                <h3 id="titulofinal"></h3>
-                <div id="datosfinal"></div>
-              </div>
-              <div class="gracias">
-                <h1 > Entrada confirmada</h1>
-                <p>Tu acceso a BLACKWORKS WEEKEND FESTIVAL está asegurado.Dos días.
-                   Una misma frecuencia.Prepárate para el hard techno, hardcore, newstyle y rave.</p>
-              </div>
-              <div class="codigo">
-                <img src="img/codigo.png" alt="QR" />
-                <button class="descargapdf">Descargar PDF</button>
-              </div>
-            </div>
-          </section>
-        </section>
+    <section class="fase" id="fase2">
+      <h2>Gracias por tu compra</h2>
+      <div class="tarjeta">
+        <div class="imagenfinal">
+          <img src="img/imagenfinal.jpg" alt="Final" />
+        </div>
+        <div class="textofinal">
+          <h3 id="titulofinal"></h3>
+          <div id="datosfinal"></div>
+        </div>
+        <div class="gracias">
+          <h1>Entrada confirmada</h1>
+          <p>
+            Tu acceso a BLACKWORKS WEEKEND FESTIVAL está asegurado.Dos días. Una
+            misma frecuencia.Prepárate para el hard techno, hardcore, newstyle y
+            rave.
+          </p>
+        </div>
+        <div class="codigo">
+          <img src="img/codigo.png" alt="QR" />
+          <button class="descargapdf">Descargar PDF</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- segundo paso de compra -->
     <!-- enlace js -->
     <script src="javascript.js"></script>
   </body>
