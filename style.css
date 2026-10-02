@@ -96,7 +96,6 @@ img {
   border-radius: var(--radio-boton);
 }
 
-
 /* DESPLEGABLE BURGER */
 .menuhamburguesa {
   position: fixed;
@@ -149,28 +148,24 @@ img {
   font-size: 70px;
   color: var(--primary-color);
   margin-bottom: 18px;
-  
-  
 }
 
 .menuopciones a:hover {
   color: var(--white);
   transition: 0.2s;
-
 }
 
 /* HOME */
 
 .home {
-    padding-top: var(--nav-height);
-    position: relative;
-
+  padding-top: var(--nav-height);
+  position: relative;
 }
 
 .home video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-texto {
@@ -207,10 +202,9 @@ img {
   overflow: hidden;
   padding: 20px 0;
   position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-  
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .ticketscarrusel-texto {
@@ -270,7 +264,6 @@ width: 100%;
 }
 
 .info-texto:last-child {
-
   right: 60px;
   bottom: 150px;
   text-align: right;
@@ -310,7 +303,6 @@ width: 100%;
   flex-shrink: 0;
 }
 
-
 /* ARTISTAS */
 
 .artistas {
@@ -343,7 +335,6 @@ width: 100%;
   object-fit: cover;
   max-width: none;
 }
-
 
 .artista-nombre:nth-child(1) {
   top: 0;
@@ -469,51 +460,14 @@ width: 100%;
   left: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
+/* ANIMO LEONAAAAAAAAAAAAAAAAAAAA */
 /* pagina de tickets.................................................... */
 /* * botones */
+/* .btn-add {
+  position: relative;
+} */
+
 .btn-add,
 .descargapdf {
   border: 0;
@@ -530,9 +484,19 @@ width: 100%;
   color: var(--secondary-color);
 }
 
+.btn-vip:hover {
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
 .btn-general {
   background-color: var(--primary-color);
   color: var(--white);
+}
+
+.btn-general:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s;
 }
 
 .btn-undia {
@@ -540,9 +504,19 @@ width: 100%;
   color: var(--primary-color);
 }
 
+.btn-undia:hover {
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
 .btn-bonocopas {
   background-color: var(--white);
   color: var(--primary-color);
+}
+
+.btn-bonocopas:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s;
 }
 
 /* nav de guia de pasos en la compra  */
@@ -550,7 +524,7 @@ width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: calc(var(--nav-height) + 24px) 20px 24px;
+  padding: calc(var(--nav-height) + 24px) 50px 24px;
   /* position: sticky; */
 }
 
@@ -574,4 +548,69 @@ width: 100%;
   color: var(--secondary-color);
 }
 
-/* Lineup */
+/* tipos de entradas */
+.cajas {
+  height: 900px;
+  padding: 1px 25px 24px; /* arriba, lados, abajo */
+  margin-top: 5px;
+}
+
+.container {
+  max-width: 100vh;
+  margin: 0 auto;
+  margin-left: 40px;
+}
+
+.tickets {
+  list-style: none;
+  display: grid;
+  gap: 50px; /* espacio entre cada ticket */
+}
+
+.ticket,
+.ticket-dia,
+.ticket-bonocopas,
+.ticket-general {
+  display: flex;
+  gap: 14px;
+  min-height: 100px;
+  color: var(--ticket-color);
+}
+
+.ticket.vip {
+  --ticket-bg: var(--secondary-color);
+  --ticket-color: #fff;
+  /* --btn-bg: var(--primary-color);
+  --btn-color: #fff; */
+}
+.ticket-general {
+  --ticket-bg: var(--white);
+  --ticket-color: var(--secondary-color); /* texto negro */
+}
+
+.ticket-dia {
+  --ticket-bg: var(--ticketred);
+  --ticket-color: #fff;
+  /* --btn-bg: var(--secondary-color);
+  --btn-color: var(--primary-color); */
+}
+
+.ticket-bonocopas {
+  --ticket-bg: var(--ticketblue);
+  --ticket-color: #fff;
+  /* --btn-bg: #fff;
+  --btn-color: var(--primary-color); */
+}
+
+.ticket-main {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 8px;
+  padding: 16px 24px;
+  background: var(--ticket-bg);
+  width: 1140px;
+}
