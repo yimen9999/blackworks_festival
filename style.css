@@ -278,7 +278,6 @@ width: 100%;
 
 /* carrusel logos */
 
-
 .logo-tira {
   display: flex;
   width: max-content;
@@ -334,10 +333,8 @@ width: 100%;
   font-family: var(--secundary-font);
   font-size: 150px;
   line-height: 1;
- justify-content: space-between;
+  justify-content: space-between;
 }
-
-
 
 .fila-artistas img {
   width: 220px;
@@ -358,7 +355,10 @@ width: 100%;
   width: 1050px;
 }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .fila-8 img {
   width: 550px;
   object-position: center 25%;
@@ -368,6 +368,7 @@ width: 100%;
   width: 400px;
 }
 
+<<<<<<< Updated upstream
 
 
 
@@ -406,6 +407,8 @@ width: 100%;
 
 
 
+=======
+>>>>>>> Stashed changes
 /* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
 /* pagina de tickets.................................................... */
 /* * botones */
