@@ -298,11 +298,6 @@ img {
   flex-shrink: 0;
 }
 
-/* ARTISTAS */
-
-/* Lineup */
-
-
 .artistas {
   padding: 70px 50px 120px;
   min-height: 1400px;
@@ -340,6 +335,8 @@ img {
 
 .fila-2 img:first-of-type {
   width: 400px;
+}
+
 .fila-3 img {
   width: 300px;
 }
@@ -356,7 +353,6 @@ img {
 .artista-nombre:nth-child(1) {
   top: 0;
   left: 0;
-
 }
 
 .fila-9 img:first-of-type {
@@ -376,7 +372,6 @@ img {
   left: 0;
   width: 460px;
   height: 65px;
-
 }
 
 .fila-8 img {
@@ -387,58 +382,8 @@ img {
 .fila-9 img:first-of-type {
   width: 400px;
 }
-=======
 
-
-
-/* LUZZZZZZ */
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 1ad94f80a39587b959ba32d6d41f25abba5720e3
-
-/* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
-/* ANIMO LEONAAAAAAAAAAAAAAAAAAAA */
-/* pagina de tickets.................................................... */
-/* * botones */
-/* .btn-add {
-  position: relative;
-} */
-
-=======
->>>>>>> b660e31e033cccab61e6ad02a0c840e2c46763da
+/* /* TICKETS */
 .btn-add,
 .descargapdf {
   border: 0;
@@ -872,12 +817,4 @@ body.fase-3 .steps {
 #fase2 .descargapdf:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 2px;
-/* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
-/* ANIMO LEONAAAAAAAAAAAAAAAAAAAA */
-/* pagina de tickets.................................................... */
-/* * botones */
-/* .btn-add {
-  position: relative;
-} */
-
-
+}
