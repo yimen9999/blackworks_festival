@@ -613,4 +613,292 @@ img {
   padding: 16px 24px;
   background: var(--ticket-bg);
   width: 1140px;
+  height: 150px;
+  /* border-radius: 20px; */
+}
+
+.ticket-stub {
+  position: relative;
+  flex: 0 0 150px; /* define el ancho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: var(--ticket-bg);
+}
+
+.ticket,
+.ticket-dia,
+.ticket-bonocopas,
+.ticket-general {
+  transition: transform 0.25s ease;
+}
+
+.ticket:hover,
+.ticket-dia:hover,
+.ticket-bonocopas:hover,
+.ticket-general:hover {
+  transform: scale(1.03);
+}
+.ticket-vip-stub {
+  --ticket-bg: var(--secondary-color);
+  --ticket-color: #fff;
+}
+
+.ticket-general-stub {
+  --ticket-bg: var(--white);
+  --ticket-color: var(--secondary-color);
+}
+
+.ticket-undia-stub {
+  --ticket-bg: var(--ticketred);
+  --ticket-color: #fff;
+}
+
+.ticket-bonocopas-stub {
+  --ticket-bg: var(--ticketblue);
+  --ticket-color: #fff;
+}
+
+/* bordes */
+
+.ticket-main::before,
+.ticket-main::after,
+.ticket-stub::before,
+.ticket-stub::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at 0 50%,
+      var(--primary-color) 4px,
+      transparent 4.5px
+    )
+    0 0 / 10px 14px repeat-y;
+}
+
+.ticket-main::before,
+.ticket-stub::before {
+  left: 0;
+}
+
+.ticket-main::after,
+.ticket-stub::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+/* botones de paso de compra  */
+body.fase-2 .step,
+body.fase-3 .step {
+  background: #000;
+  border-color: #000;
+  color: var(--ticketred, #e8130c);
+  border-radius: 999px;
+}
+
+body.fase-2 .step.is-active,
+body.fase-3 .step.is-active {
+  background: var(--ticketred, #e8130c);
+  border-color: var(--ticketred, #e8130c);
+  color: #000;
+}
+body.fase-3 {
+  padding-bottom: 0; /* sin barra Atrás/Siguiente */
+}
+
+body.fase-3 .steps {
+  position: absolute;
+  top: calc(var(--nav-height) + 16px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-width: none;
+  margin: 0;
+  padding: 0 24px;
+}
+
+/* formulario */
+#fase1 {
+  background-color: var(--white);
+  padding: 24px;
+  margin-top: 20px;
+  height: 100vh;
+}
+#fase1 .formulario {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+  margin: 80px auto 0;
+}
+
+#fase1 input {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-family: var(--primary-font);
+  font-size: 0.75rem;
+}
+
+#fase1 .cantidad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-family: var(--primary-font);
+  font-size: 0.75rem;
+}
+
+#fase1 .controles {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#fase1 .controles button {
+  border: 0;
+  background: none;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+#fase1 #contador {
+  min-width: 1.5ch;
+  text-align: center;
+  font-weight: 800;
+}
+
+#fase1 .total {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+#fase1 input:focus-visible,
+#fase1 .controles button:focus-visible {
+  outline: 3px solid var(--ticketred, #e8130c);
+  outline-offset: 2px;
+}
+
+/* compra realizada */
+#fase2 {
+  background-color: var(--ticketblue);
+  padding: 24px;
+  margin-top: 20px;
+  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(
+    100dvh - var(--nav-height)
+  ); /* para q en movil omita el nav */
+}
+
+/* ---------- TARJETA ---------- */
+#fase2 .tarjeta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "imagen imagen"
+    "gracias codigo"
+    "texto   codigo";
+  column-gap: 40px;
+  background: var(--ticketblue, #4b5a85);
+  color: #000;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---------- IMAGEN ---------- */
+#fase2 .imagenfinal {
+  grid-area: imagen;
+  height: 50%;
+}
+
+#fase2 .imagenfinal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- TEXTO ---------- */
+#fase2 .gracias {
+  grid-area: gracias;
+  align-self: end;
+  padding: 40px 0 0 56px;
+}
+
+#fase2 .gracias h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+#fase2 .gracias p {
+  max-width: 600px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#fase2 .textofinal {
+  grid-area: texto;
+  padding: 16px 0 40px 56px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#fase2 .textofinal h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ---------- QR + DESCARGAR ---------- */
+#fase2 .codigo {
+  grid-area: codigo;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 56px 40px 0;
+}
+
+#fase2 .codigo img {
+  width: 140px;
+  height: auto;
+  background: #fff;
+}
+
+/* .descargapdf ya hereda el estilo de botón compartido;
+   aquí lo dejo como enlace de texto blanco, como en el diseño */
+#fase2 .descargapdf {
+  background: transparent;
+  color: #fff;
+  padding: 4px 0;
+  font-size: 0.7rem;
+}
+
+#fase2 .descargapdf:hover {
+  text-decoration: underline;
+}
+
+#fase2 .descargapdf:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
