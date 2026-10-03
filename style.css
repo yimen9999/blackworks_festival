@@ -306,7 +306,8 @@ width: 100%;
 }
 
 
-/* ARTISTAS */
+/* Lineup */
+
 
 .artistas {
   padding: 70px 50px 120px;
@@ -355,10 +356,6 @@ width: 100%;
   width: 1050px;
 }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 .fila-8 img {
   width: 550px;
   object-position: center 25%;
@@ -367,109 +364,3 @@ width: 100%;
 .fila-9 img:first-of-type {
   width: 400px;
 }
-
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> Stashed changes
-/* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
-/* pagina de tickets.................................................... */
-/* * botones */
-.btn-add,
-.descargapdf {
-  border: 0;
-  border-radius: var(--radio-boton);
-  padding: var(--padding-boton);
-  font-family: var(--primary-font);
-  font-weight: 800;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.btn-vip {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.btn-general {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-
-.btn-undia {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-.btn-bonocopas {
-  background-color: var(--white);
-  color: var(--primary-color);
-}
-
-/* nav de guia de pasos en la compra  */
-.steps {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: calc(var(--nav-height) + 24px) 20px 24px;
-  /* position: sticky; */
-}
-
-.step {
-  flex: 1;
-  text-align: center;
-  padding: 10px 14px;
-  border: 2px solid var(--secondary-color);
-  border-radius: var(--radio-boton);
-  background: var(--secondary-color);
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-/* paso actual: contorno negro y fondo rojo */
-.step.is-active {
-  background: transparent;
-  color: var(--secondary-color);
-}
-
-/* Lineup */
