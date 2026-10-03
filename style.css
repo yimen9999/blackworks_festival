@@ -271,11 +271,7 @@ img {
 
 /* carrusel logos */
 
-.logo-carrusel {
-  background-color: var(--secondary-color);
-  overflow: hidden;
-  padding: 20px 0;
-}
+
 .logo-tira {
   display: flex;
   width: max-content;
@@ -306,46 +302,71 @@ img {
 /* ARTISTAS */
 
 .artistas {
-  background-color: var(--primary-color);
-  padding: 60px 45px 100px;
-  position: relative;
+  padding: 70px 50px 120px;
+  min-height: 1400px;
 }
 
 .artistas h2 {
   font-family: var(--secundary-font);
-  font-size: 70px;
-  margin-bottom: 70px;
+  font-size: 180px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 80px;
 }
 
-.artistas-lista {
-  position: relative;
-  height: 900px;
+.artistas-lineup {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.artista-nombre {
-  position: absolute;
+.fila-artistas {
+  display: flex;
+  align-items: center;
   font-family: var(--secundary-font);
-  font-size: 60px;
+  font-size: 150px;
   line-height: 1;
-  white-space: nowrap;
+ justify-content: space-between;
 }
 
-.artista-imagen {
-  position: absolute;
+
+
+.fila-artistas img {
+  width: 220px;
+  height: 130px;
   object-fit: cover;
-  max-width: none;
+  flex-shrink: 0;
 }
 
+.fila-2 img:first-of-type {
+  width: 400px;
+}
+
+.fila-3 img {
+  width: 300px;
+}
+
+.fila-4 img {
+  width: 1050px;
+}
+
+<<<<<<< HEAD
 .artista-nombre:nth-child(1) {
   top: 0;
   left: 0;
+=======
+
+.fila-8 img {
+  width: 550px;
+  object-position: center 25%;
+>>>>>>> 1ad94f80a39587b959ba32d6d41f25abba5720e3
 }
 
-.artista-nombre:nth-child(2) {
-  top: 0;
-  left: 45%;
+.fila-9 img:first-of-type {
+  width: 400px;
 }
 
+<<<<<<< HEAD
 .artista-imagen:nth-child(3) {
   top: 65px;
   left: 0;
@@ -459,6 +480,45 @@ img {
   top: 575px;
   left: 0;
 }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 1ad94f80a39587b959ba32d6d41f25abba5720e3
 
 /* LUZZZZZZ NOOO PUEDOOO MASSSSS JAKKKKSSSSSS */
 /* ANIMO LEONAAAAAAAAAAAAAAAAAAAA */
