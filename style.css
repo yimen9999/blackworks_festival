@@ -96,6 +96,7 @@ img {
   border-radius: var(--radio-boton);
 }
 
+
 /* DESPLEGABLE BURGER */
 .menuhamburguesa {
   position: fixed;
@@ -148,24 +149,28 @@ img {
   font-size: 70px;
   color: var(--primary-color);
   margin-bottom: 18px;
+  
+  
 }
 
 .menuopciones a:hover {
   color: var(--white);
   transition: 0.2s;
+
 }
 
 /* HOME */
 
 .home {
-  padding-top: var(--nav-height);
-  position: relative;
+    padding-top: var(--nav-height);
+    position: relative;
+
 }
 
 .home video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .home-texto {
@@ -202,9 +207,10 @@ img {
   overflow: hidden;
   padding: 20px 0;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+bottom: 0;
+left: 0;
+width: 100%;
+  
 }
 
 .ticketscarrusel-texto {
@@ -264,6 +270,7 @@ img {
 }
 
 .info-texto:last-child {
+
   right: 60px;
   bottom: 150px;
   text-align: right;
@@ -297,6 +304,10 @@ img {
   width: 70px;
   flex-shrink: 0;
 }
+
+
+/* Lineup */
+
 
 .artistas {
   padding: 70px 50px 120px;
@@ -350,41 +361,69 @@ img {
   object-position: center 25%;
 }
 
-.artista-nombre:nth-child(1) {
-  top: 0;
-  left: 0;
-}
-
 .fila-9 img:first-of-type {
   width: 400px;
 }
 
-.fila-3 img {
-  width: 300px;
+
+/* MERCH */
+
+.merch {
+  background-color: var(--primary-color);
+  padding: 85px 55px 45px;
 }
 
-.fila-4 img {
-  width: 1050px;
+.merch-titulo {
+  font-family: var(--primary-font);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--secondary-color);
+  width: 600px;
+  margin-bottom: 28px;
 }
 
-.artista-imagen:nth-child(3) {
-  top: 65px;
-  left: 0;
-  width: 460px;
-  height: 65px;
+.merch-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
 }
 
-.fila-8 img {
-  width: 550px;
-  object-position: center 25%;
+.merch-caja {
+  margin: 0;
 }
 
-.fila-9 img:first-of-type {
-  width: 400px;
+.merch-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
 /* /* /* TICKETS..................................... */
 
+.merch-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.merch-caja figcaption {
+  font-family: var(--primary-font);
+  font-size: 12px;
+  color: var(--white);
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* LUZZZZZZ */
+
+
+.btn-add,
 .descargapdf {
   border: 0;
   border-radius: var(--radio-boton);
