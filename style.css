@@ -51,6 +51,9 @@ img {
   display: block;
   max-width: 100%;
 }
+.oculto {
+  display: none !important;
+}
 
 /* nav */
 
@@ -95,7 +98,6 @@ img {
   padding: var(--padding-boton);
   border-radius: var(--radio-boton);
 }
-
 
 /* DESPLEGABLE BURGER */
 .menuhamburguesa {
@@ -149,28 +151,24 @@ img {
   font-size: 70px;
   color: var(--primary-color);
   margin-bottom: 18px;
-  
-  
 }
 
 .menuopciones a:hover {
   color: var(--white);
   transition: 0.2s;
-
 }
 
 /* HOME */
 
 .home {
-    padding-top: var(--nav-height);
-    position: relative;
-
+  padding-top: var(--nav-height);
+  position: relative;
 }
 
 .home video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-texto {
@@ -207,10 +205,9 @@ img {
   overflow: hidden;
   padding: 20px 0;
   position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-  
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .ticketscarrusel-texto {
@@ -270,7 +267,6 @@ width: 100%;
 }
 
 .info-texto:last-child {
-
   right: 60px;
   bottom: 150px;
   text-align: right;
@@ -305,9 +301,7 @@ width: 100%;
   flex-shrink: 0;
 }
 
-
 /* Lineup */
-
 
 .artistas {
   padding: 70px 50px 120px;
@@ -365,7 +359,6 @@ width: 100%;
   width: 400px;
 }
 
-
 /* MERCH */
 
 .merch {
@@ -416,12 +409,7 @@ width: 100%;
   line-height: 1.5;
 }
 
-
-
-
-
 /* LUZZZZZZ */
-
 
 .btn-add,
 .descargapdf {
@@ -475,11 +463,26 @@ width: 100%;
 }
 
 /* nav de guia de pasos en la compra  */
+
 .steps {
+  position: fixed;
+  /* top: var(--nav-height); */
+  display: flex;
   display: flex;
   justify-content: space-between;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  gap: 12px;
   gap: 12px;
   padding: calc(var(--nav-height) + 24px) 50px 24px;
+  padding: calc(var(--nav-height) + 24px) 50px 24px;
+  background: var(
+    --primary-color
+  ); /* /* revisar despues de js pq da problemas */
+  /* position: sticky; */
   /* position: sticky; */
 }
 
@@ -495,6 +498,21 @@ width: 100%;
   font-size: 0.8rem;
   text-transform: uppercase;
   white-space: nowrap;
+}
+body.fase-2 {
+  background: var(--white);
+}
+body.fase-2 .steps {
+  background: var(--white);
+}
+/* body.tickets.fase-3 {
+  padding-top: var(--nav-height);
+  padding-bottom: 0;
+  background: var(--ticketblue); */
+/* } */
+body.fase-3 .steps {
+  background: transparent; /* flotan sobre la imagen */
+  padding: 16px 24px;
 }
 
 /* paso actual: contorno negro y fondo rojo */
@@ -516,7 +534,7 @@ width: 100%;
   margin-left: 40px;
 }
 
-.tickets {
+.ticketslista {
   list-style: none;
   display: grid;
   gap: 50px; /* espacio entre cada ticket */
@@ -676,11 +694,29 @@ body.fase-3 .steps {
 }
 
 /* formulario */
+.error-form {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 800;
+  min-height: 1.2em;
+}
+#fase1 select {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  font-family: var(--primary-font);
+  font-size: 0.75rem;
+  
+}
+
 #fase1 {
   background-color: var(--white);
   padding: 24px;
   margin-top: 20px;
-  height: 100vh;
+  height: calc(100dvh - var(--nav-height));
 }
 #fase1 .formulario {
   display: grid;
@@ -749,127 +785,32 @@ body.fase-3 .steps {
   outline-offset: 2px;
 }
 
-/* compra realizada */
-/* body.tickets.fase-3 {
-  padding-bottom: 0;
-  background: var(--ticketblue, #4b5a85);
-}
-#fase2,
-#fase2 .tarjeta {
-  padding: 0;
-  margin: 0;
-  max-width: none;
-  width: 100%;
-}
-/* #fase2 {
-  background-color: var(--ticketblue);
-  padding: 24px;
-  margin-top: 20px;
-  min-height: 100vh;
-  }
-
----------- TARJETA ----------
-#fase2 .tarjeta {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "imagen imagen"
-    "gracias codigo"
-    "texto   codigo";
-  column-gap: 40px;
-  background: var(--ticketblue, #4b5a85);
-  color: #000;
-  width: 100%;
-  height: 100vh;
-} */
-
-/* ---------- IMAGEN ---------- */
-/* #fase2 .imagenfinal {
-  grid-area: imagen;
-  height: 50%;
-}
-
-#fase2 .imagenfinal img {
-  display: block;
-  width: 100%;
-  height: auto;
-} */
-
-/* ---------- TEXTO ---------- */
-/* #fase2 .gracias {
-  grid-area: gracias;
-  align-self: start;
-  padding: 50px 0 20px 56px;
-}
-
-#fase2 .gracias h1 {
-  font-size: 4.5rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.1;
-  margin-bottom: 12px;
-}
-
-#fase2 .gracias p {
-  max-width: 600px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-#fase2 .textofinal {
-  grid-area: texto;
-  padding: 16px 0 40px 56px;
+#fase1 .btn-confirmar {
+  justify-self: start;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 24px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
   font-size: 0.85rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-#fase2 .textofinal h3 {
-  font-size: 1rem;
   font-weight: 800;
-  text-transform: uppercase;
-} */
-
-/* ---------- QR + DESCARGAR ---------- */
-/* #fase2 .codigo {
-  grid-area: codigo;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 0x 56px 40px 0;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
 }
 
-#fase2 .codigo img {
-  width: clamp(140px, 18vw, 260px);  /* para q no desvorde en movil */
-/* height: auto;
-  background: #fff;
-} */
-
-/* .descargapdf ya hereda el estilo de botón compartido;
-   aquí lo dejo como enlace de texto blanco, como en el diseño */
-/* #fase2 .descargapdf {
-  background: transparent;
-  color: #fff;
-  padding: 4px 0;
-  font-size: 0.7rem;
+#fase1 .btn-confirmar:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 
-#fase2 .descargapdf:hover {
-  text-decoration: underline;
-}
-
-#fase2 .descargapdf:focus-visible {
-  outline: 3px solid #fff;
+#fase1 .btn-confirmar:focus-visible {
+  outline: 3px solid var(--ticketred);
   outline-offset: 2px;
-} */
-*/
+}
 
-/* cambio cambio cambio */
-
-/* ===== FASE 3: CONFIRMACIÓN ===== */
 body.tickets.fase-3 {
   padding-bottom: 0;
   background: var(--ticketblue, #4b5a85);
@@ -961,4 +902,83 @@ body.tickets.fase-3 .navegacion {
   color: #fff;
   font-size: 0.75rem;
   padding: 4px 0;
+}
+
+ /* barra de atras y siguiente............. */
+/* hueco para que la barra fija no tape el contenido */
+body.fase-1,
+body.fase-2 {
+  calc(var(--nav-height) + 74px);
+}
+.navegacion {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 50px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  background: transparent;
+  border: 0;
+  pointer-events: none; /* para q no interfiera con el foco de los botones */
+}
+.navegacion .boton {
+  pointer-events: auto;
+  /* /* para q los botones reciban clicks */
+}
+.boton {
+  min-width: 140px;
+  padding: var(--padding-boton);
+  border-radius: var(--radio-boton);
+  font-family: var(--primary-font);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    opacity 0.25s;
+}
+#anterior {
+  background: var(--white);
+  color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+}
+#anterior:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+#siguiente {
+  margin-left: auto; /* a la derecha aunque Atrás esté oculto */
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+}
+#siguiente:hover:not(:disabled) {
+  background: var(--white);
+  border-color: var(--white);
+}
+body.fase-2 #siguiente {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+body.fase-2 #siguiente:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+/* ---------- Estados ---------- */
+.boton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.boton:focus-visible {
+  outline: 3px solid var(--ticketblue);
+  outline-offset: 2px;
 }

@@ -65,7 +65,7 @@
     <!-- tipos de entradas -->
     <section class="cajas" id="tickets">
       <div class="container">
-        <ul class="tickets">
+        <ul class="ticketslista">
           <!--  ticket vip -->
           <li
             class="ticket vip"
@@ -172,6 +172,10 @@
         <div class="total">
           Coste total de las entradas : <span id="preciototal"></span>
         </div>
+        <p id="errorform" class="error-form" role="alert"></p>
+        <button type="button" id="confirmar" class="btn-confirmar">
+          Confirmar
+        </button>
       </div>
     </section>
 
@@ -180,7 +184,10 @@
         <div class="imagenfinal">
           <img src="img/imagencompra.png" alt="Final" />
         </div>
-
+        <div class="textofinal">
+          <h3 id="titulofinal"></h3>
+          <div id="datosfinal"></div>
+        </div>
         <div class="gracias">
           <h1>Entrada confirmada</h1>
           <p>
@@ -195,21 +202,17 @@
         </div>
       </div>
     </section>
-
     <!-- botones de siguiente-anterior -->
 
-    <!-- <div class="navegacion" id="navegacioncompra">
-          <button id="anterior" class="boton oculto">Atrás</button>
-          <button id="siguiente" class="boton">Siguiente</button>
-        </div>
-      </section>
-    </main> -->
+    <div class="navegacion" id="navegacioncompra">
+      <button id="anterior" class="boton oculto">Atrás</button>
+      <button id="siguiente" class="boton">Siguiente</button>
+    </div>
 
     <!-- enlace js -->
     <script src="javascript.js"></script>
+    <script src="compra.js"></script>
   </body>
 </html>
-
-
 
 <!-- SERA O NO SERA -->
