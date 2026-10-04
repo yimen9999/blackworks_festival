@@ -62,7 +62,7 @@
       <span class="step">3.Confirmación</span>
     </nav>
 
- <!-- tipos de entradas -->
+    <!-- tipos de entradas -->
     <section class="cajas" id="tickets">
       <div class="container">
         <ul class="tickets">
@@ -83,7 +83,9 @@
                 privilegiada y con todas las comodidades.
               </p>
             </div>
-            <div class="ticket-stub ticket-vip-stub"><img src="img/VIPlogo.png" alt="" /></div>
+            <div class="ticket-stub ticket-vip-stub">
+              <img src="img/VIPlogo.png" alt="" />
+            </div>
           </li>
           <!--  ticket general -->
           <li
@@ -122,7 +124,9 @@
                 escenarios y de toda la programación del día seleccionado.
               </p>
             </div>
-            <div class="ticket-stub ticket-undia-stub"><img src="img/DAYlogo.png" alt="" /></div>
+            <div class="ticket-stub ticket-undia-stub">
+              <img src="img/DAYlogo.png" alt="" />
+            </div>
           </li>
 
           <!-- bonocopas -->
@@ -134,7 +138,9 @@
           >
             <div class="ticket-main">
               <h2>BONOCOPAS - 45€</h2>
-              <button class="btn-add btn-bonocopas" type="button">Añadir</button>
+              <button class="btn-add btn-bonocopas" type="button">
+                Añadir
+              </button>
               <p>
                 Disfruta de tus bebidas durante el festival con un bono de copas
                 que incluye varias consumiciones y te permite ahorrar frente a
@@ -152,20 +158,19 @@
 
     <section class="section" id="fase1">
       <div class="formulario">
-        <input type="text" id="nombre" placeholder="Nombre y apellidos" />
-        <input type="email" id="correo" placeholder="Correo electrónico" />
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+        <input type="email" id="correo" placeholder="Escribe tu correo" />
+        <select id="tipo"></select>
         <div class="cantidad">
-          <label>Total de entradas</label>
+          <label>Número de entradas</label>
           <div class="controles">
-            <button id="restar">-</button>
+            <button type="button" id="sumar">+</button>
             <span id="contador">1</span>
-            <button id="sumar">+</button>
+            <button type="button" id="restar">-</button>
           </div>
         </div>
-
         <div class="total">
-          Precio total:
-          <span id="preciototal"></span>
+          Coste total de las entradas : <span id="preciototal"></span>
         </div>
       </div>
     </section>
@@ -175,10 +180,7 @@
         <div class="imagenfinal">
           <img src="img/imagencompra.png" alt="Final" />
         </div>
-        <div class="textofinal">
-          <h3 id="titulofinal"></h3>
-          <div id="datosfinal"></div>
-        </div>
+
         <div class="gracias">
           <h1>Entrada confirmada</h1>
           <p>
@@ -196,12 +198,12 @@
 
     <!-- botones de siguiente-anterior -->
 
-    <div class="navegacion" id="navegacioncompra">
+    <!-- <div class="navegacion" id="navegacioncompra">
           <button id="anterior" class="boton oculto">Atrás</button>
           <button id="siguiente" class="boton">Siguiente</button>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <!-- enlace js -->
     <script src="javascript.js"></script>
