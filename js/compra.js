@@ -1,6 +1,5 @@
 (function () {
   "use strict";
-  
 
   const MAX_ENTRADAS = 4;
 
@@ -18,8 +17,9 @@
   const precioTotalEl = document.getElementById("preciototal");
   const errorEl = document.getElementById("errorform");
   const btnConfirmar = document.getElementById("confirmar");
-  const tituloFinal = document.getElementById("titulofinal"); 
-  const datosFinal = document.getElementById("datosfinal"); 
+  const tituloFinal = document.getElementById("titulofinal");
+  const datosFinal = document.getElementById("datosfinal");
+  const btnAnterior = document.getElementById("anterior");
 
   // dnd estas en el proceso de compra
   const estado = {
@@ -47,11 +47,12 @@
     selectTipo.appendChild(op);
   });
 
-  /* ==========================================================
-   CAMBIO DE FASE
-   ========================================================== */
+  // CAMBIOS DE FASE
   function irAFase(n) {
     estado.fase = n;
+
+    btnAnterior.classList.toggle("oculto", n !== 2);
+    // solo se ve el boton en el formulario y no en lo demas
 
     // solo se muestra la sección de la fase en la q estas y oculta las otras dos
     Object.entries(secciones).forEach(([num, sec]) => {
@@ -81,6 +82,10 @@
       const destino = i + 1;
       if (estado.fase < 3 && destino < estado.fase) irAFase(destino);
     });
+  });
+
+  btnAnterior.addEventListener("click", () => {
+    irAFase(1);
   });
 
   /* ==========================================================
@@ -123,7 +128,7 @@
     estado.tipo = selectTipo.value;
     actualizarTotal();
   });
-// añade o resta entradas hast llegar al maximo 
+  // añade o resta entradas hast llegar al maximo
   function validar() {
     const nombre = inputNombre.value.trim();
     const correo = inputCorreo.value.trim();
