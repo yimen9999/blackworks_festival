@@ -398,7 +398,7 @@ img {
 }
 
 .merch-img:hover img {
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 
 .merch-caja figcaption {
@@ -407,15 +407,14 @@ img {
   color: var(--white);
   margin-top: 15px;
   line-height: 1.5;
-   font-weight: 700;
+  font-weight: 700;
 }
 
 .merch-caja figcaption + figcaption {
   margin-top: 3px;
-   font-weight: 400;
-   font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
 }
-
 
 /* DANCE */
 
@@ -437,7 +436,7 @@ img {
 
 /* FOOTER */
 .footer {
-  background-color:var(--secondary-color);
+  background-color: var(--secondary-color);
   height: 480px;
   position: relative;
   padding-top: 120px;
@@ -502,7 +501,7 @@ img {
   background-color: var(--primary-color);
   border: none;
   border-radius: 8px;
-  color:var(--white);
+  color: var(--white);
   font-size: 18px;
   cursor: pointer;
 }
@@ -564,22 +563,17 @@ img {
 
 .steps {
   position: fixed;
-  /* top: var(--nav-height); */
+  top: var(--nav-height);
   display: flex;
   display: flex;
-  justify-content: space-between;
   justify-content: space-between;
   left: 0;
   right: 0;
   z-index: 900;
   display: flex;
   gap: 12px;
-  gap: 12px;
-  padding: calc(var(--nav-height) + 24px) 50px 24px;
-  padding: calc(var(--nav-height) + 24px) 50px 24px;
-  background: var(
-    --primary-color
-  ); /* /* revisar despues de js pq da problemas */
+  padding: 16px 50px;
+  background: transparent; /* /* revisar despues de js pq da problemas */
   /* position: sticky; */
   /* position: sticky; */
 }
@@ -807,7 +801,6 @@ body.fase-3 .steps {
   background: #fff;
   font-family: var(--primary-font);
   font-size: 0.75rem;
-  
 }
 
 #fase1 {
@@ -910,8 +903,9 @@ body.fase-3 .steps {
 }
 
 body.tickets.fase-3 {
+  padding-top: var(--nav-height);
   padding-bottom: 0;
-  background: var(--ticketblue, #4b5a85);
+  background: var(--ticketblue);
 }
 
 body.tickets.fase-3 .navegacion {
@@ -978,7 +972,7 @@ body.tickets.fase-3 .navegacion {
   font-weight: 500;
 }
 
-#fase2 .codigo {
+#fase32 .codigo {
   grid-area: codigo;
   align-self: center;
   display: flex;
@@ -1002,12 +996,12 @@ body.tickets.fase-3 .navegacion {
   padding: 4px 0;
 }
 
- /* barra de atras y siguiente............. */
+/* barra de atras y siguiente............. */
 /* hueco para que la barra fija no tape el contenido */
-body.fase-1,
-body.fase-2 {
-  calc(var(--nav-height) + 74px);
+body.tickets {
+  padding-top: calc(var(--nav-height) + 74px);
 }
+
 .navegacion {
   position: fixed;
   left: 0;

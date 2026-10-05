@@ -1,16 +1,9 @@
 (function () {
   "use strict";
-  /* ==========================================================
-   FLUJO DE COMPRA (todo en la misma página)
-   1. Entradas -> 2. Datos personales -> 3. Confirmación
-   - "Añadir" (fase 1) lleva al formulario
-   - "Confirmar" (fase 2) lleva a la confirmación
-   - Se puede volver pulsando un paso ya completado del menú
-   ========================================================== */
+  
 
-  const MAX_ENTRADAS = 2;
+  const MAX_ENTRADAS = 4;
 
-  /* ---------- Elementos ---------- */
   const secciones = {
     1: document.getElementById("tickets"), // primera pantalla de entradas dnd eliges
     2: document.getElementById("fase1"), // formulario
@@ -25,8 +18,8 @@
   const precioTotalEl = document.getElementById("preciototal");
   const errorEl = document.getElementById("errorform");
   const btnConfirmar = document.getElementById("confirmar");
-  const tituloFinal = document.getElementById("titulofinal"); // opcional
-  const datosFinal = document.getElementById("datosfinal"); // opcional
+  const tituloFinal = document.getElementById("titulofinal"); 
+  const datosFinal = document.getElementById("datosfinal"); 
 
   // dnd estas en el proceso de compra
   const estado = {
@@ -130,7 +123,7 @@
     estado.tipo = selectTipo.value;
     actualizarTotal();
   });
-
+// añade o resta entradas hast llegar al maximo 
   function validar() {
     const nombre = inputNombre.value.trim();
     const correo = inputCorreo.value.trim();
