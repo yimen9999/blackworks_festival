@@ -1204,7 +1204,7 @@ img {
 
 /* fase entradas */
 body.tickets {
-  padding-top: calc(var(--nav-height) + 78px);
+  padding-top: calc(var(--nav-height) + 20px);
 }
 
 .cajas {
@@ -1781,7 +1781,6 @@ body.tickets {
   font-size: 0.85rem;
   font-weight: 800;
   cursor: pointer;
-
   transition:
     background-color 0.25s,
     color 0.25s;
@@ -1959,7 +1958,7 @@ body.tickets.fase-3 .navegacion {
 
 
   body.tickets {
-    padding-top:calc(var(--nav-height) + 65px);
+    padding-top:calc(var(--nav-height) + 20px);
   }
 
   .cajas {
