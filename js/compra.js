@@ -3,155 +3,455 @@
 
   const MAX_ENTRADAS = 4;
 
+  const GASTOS_GESTION = 1.5;
+
   const secciones = {
-    1: document.getElementById("tickets"), // primera pantalla de entradas dnd eliges
-    2: document.getElementById("fase1"), // formulario
-    3: document.getElementById("fase2"), // confirmación de compra
+    1: document.getElementById("tickets"),
+
+    2: document.getElementById("fase1"),
+
+    3: document.getElementById("fase2"),
   };
 
+  // elementosssss
   const pasos = document.querySelectorAll(".steps .step");
+
   const inputNombre = document.getElementById("nombre");
+
   const inputCorreo = document.getElementById("correo");
+
   const selectTipo = document.getElementById("tipo");
-  const contadorEl = document.getElementById("contador");
+
   const precioTotalEl = document.getElementById("preciototal");
+
   const errorEl = document.getElementById("errorform");
+
   const btnConfirmar = document.getElementById("confirmar");
+
   const tituloFinal = document.getElementById("titulofinal");
+
   const datosFinal = document.getElementById("datosfinal");
+
   const btnAnterior = document.getElementById("anterior");
 
-  // dnd estas en el proceso de compra
+  //  elementos del resumen
+  const resumenVacio = document.getElementById("resumenvacio");
+
+  const resumenEntradas = document.getElementById("resumenentradas");
+
+  const resumenCantidad = document.getElementById("resumencantidad");
+
+  const resumenSubtotal = document.getElementById("resumensubtotal");
+
+  const resumenGestion = document.getElementById("resumengestion");
+
+  const resumenTotal = document.getElementById("resumentotal");
+
+  const btnComprar = document.getElementById("comprar");
+
+  const resumenFormulario = document.getElementById("resumenformulario");
+
+  // compra
   const estado = {
     fase: 1,
-    tipo: null, // "vip", "general", "undia", "bonocopas"
-    cantidad: 1,
+
+    carrito: {
+      vip: 0,
+
+      general: 0,
+
+      undia: 0,
+
+      bonocopas: 0,
+    },
   };
 
+  // catalogo
+
   const catalogo = {};
+
   document.querySelectorAll("#tickets [data-id]").forEach((li) => {
     catalogo[li.dataset.id] = {
-      // busca el <li> con data-id, y guarda su nombre y precio en el catálogo
       nombre: li.dataset.nombre,
-      precio: Number(li.dataset.precio), // lee el precio para lgo multiplicar por la cantidad de entradas
+
+      precio: Number(li.dataset.precio),
     };
   });
 
-  /* Rellena el <select> con los mismos tipos de entrada */
-  selectTipo.innerHTML =
-    '<option value="" disabled selected>Tipo de entrada</option>';
-  Object.entries(catalogo).forEach(([id, t]) => {
-    const op = document.createElement("option");
-    op.value = id;
-    op.textContent = `${t.nombre} - ${t.precio}€`;
-    selectTipo.appendChild(op);
+  function formatoPrecio(precio) {
+    return precio.toFixed(2).replace(".", ",") + " €";
+  }
+
+  // entradas total
+
+  function obtenerCantidadTotal() {
+    return Object.values(estado.carrito).reduce(
+      (total, cantidad) => total + cantidad,
+      0,
+    );
+  }
+
+  //  subtotal
+
+  function obtenerSubtotal() {
+    return Object.entries(estado.carrito).reduce((total, [id, cantidad]) => {
+      const entrada = catalogo[id];
+
+      if (!entrada) {
+        return total;
+      }
+
+      return total + entrada.precio * cantidad;
+    }, 0);
+  }
+
+  // gastos de gestion
+  function obtenerGestion() {
+    return obtenerCantidadTotal() * GASTOS_GESTION;
+  }
+
+  // total
+
+  function obtenerTotal() {
+    return obtenerSubtotal() + obtenerGestion();
+  }
+
+  // actualiza contador
+  function actualizarContadores() {
+    document.querySelectorAll("#tickets [data-id]").forEach((li) => {
+      const id = li.dataset.id;
+
+      const contador = li.querySelector(".contador-ticket");
+
+      if (contador) {
+        contador.textContent = estado.carrito[id];
+      }
+    });
+  }
+
+  // actualiza resumen
+
+  function actualizarResumen() {
+    const cantidadTotal = obtenerCantidadTotal();
+
+    const subtotal = obtenerSubtotal();
+
+    const gestion = obtenerGestion();
+
+    const total = obtenerTotal();
+
+    //  resumen
+    resumenCantidad.textContent = cantidadTotal;
+
+    resumenSubtotal.textContent = formatoPrecio(subtotal);
+
+    resumenGestion.textContent = formatoPrecio(gestion);
+
+    resumenTotal.textContent = formatoPrecio(total);
+
+    // resuemn pero vacio
+    if (cantidadTotal === 0) {
+      resumenVacio.style.display = "block";
+
+      resumenEntradas.innerHTML = "";
+    } else {
+      resumenVacio.style.display = "none";
+
+      resumenEntradas.innerHTML = "";
+
+      Object.entries(estado.carrito).forEach(([id, cantidad]) => {
+        if (cantidad <= 0) {
+          return;
+        }
+
+        const entrada = catalogo[id];
+
+        if (!entrada) {
+          return;
+        }
+
+        const fila = document.createElement("div");
+
+        fila.className = "resumen-entrada";
+
+        const texto = document.createElement("div");
+
+        texto.className = "resumen-entrada-texto";
+
+        const nombre = document.createElement("span");
+
+        nombre.className = "resumen-entrada-nombre";
+
+        nombre.textContent = entrada.nombre;
+
+        const cantidadTexto = document.createElement("span");
+
+        cantidadTexto.className = "resumen-entrada-cantidad";
+
+        cantidadTexto.textContent =
+          cantidad + " x " + formatoPrecio(entrada.precio);
+
+        texto.appendChild(nombre);
+
+        texto.appendChild(cantidadTexto);
+
+        const precio = document.createElement("strong");
+
+        precio.className = "resumen-entrada-precio";
+
+        precio.textContent = formatoPrecio(entrada.precio * cantidad);
+
+        fila.appendChild(texto);
+
+        fila.appendChild(precio);
+
+        resumenEntradas.appendChild(fila);
+      });
+    }
+
+    btnComprar.disabled = cantidadTotal === 0;
+
+    // contadores
+
+    actualizarContadores();
+
+    actualizarResumenFormulario();
+  }
+
+  //  actualiza resumen
+
+  function actualizarResumenFormulario() {
+    if (!resumenFormulario) {
+      return;
+    }
+
+    resumenFormulario.innerHTML = "";
+
+    Object.entries(estado.carrito).forEach(([id, cantidad]) => {
+      if (cantidad <= 0) {
+        return;
+      }
+
+      const entrada = catalogo[id];
+
+      if (!entrada) {
+        return;
+      }
+
+      const fila = document.createElement("div");
+
+      fila.className = "formulario-entrada";
+
+      const nombre = document.createElement("span");
+
+      nombre.textContent = cantidad + " x " + entrada.nombre;
+
+      const precio = document.createElement("strong");
+
+      precio.textContent = formatoPrecio(cantidad * entrada.precio);
+
+      fila.appendChild(nombre);
+
+      fila.appendChild(precio);
+
+      resumenFormulario.appendChild(fila);
+    });
+
+    precioTotalEl.textContent = formatoPrecio(obtenerTotal());
+  }
+
+  // suma entrada
+
+  function sumarEntrada(id) {
+    const cantidadTotal = obtenerCantidadTotal();
+
+    if (cantidadTotal >= MAX_ENTRADAS) {
+      return;
+    }
+
+    estado.carrito[id]++;
+
+    actualizarResumen();
+  }
+
+  // resta entrada
+  function restarEntrada(id) {
+    if (estado.carrito[id] <= 0) {
+      return;
+    }
+
+    estado.carrito[id]--;
+
+    actualizarResumen();
+  }
+
+  // eventos tickets
+
+  document.getElementById("tickets").addEventListener("click", (e) => {
+    const boton = e.target.closest("button");
+
+    if (!boton) {
+      return;
+    }
+
+    const li = boton.closest("[data-id]");
+
+    if (!li) {
+      return;
+    }
+
+    const id = li.dataset.id;
+
+    if (boton.classList.contains("btn-add")) {
+      sumarEntrada(id);
+    }
+
+    if (boton.classList.contains("btn-restar")) {
+      restarEntrada(id);
+    }
   });
 
-  // CAMBIOS DE FASE
+  // lleva a fase
   function irAFase(n) {
     estado.fase = n;
 
+    // boton q te devuelve a tickets
     btnAnterior.classList.toggle("oculto", n !== 2);
-    // solo se ve el boton en el formulario y no en lo demas
 
-    // solo se muestra la sección de la fase en la q estas y oculta las otras dos
     Object.entries(secciones).forEach(([num, sec]) => {
       sec.classList.toggle("oculto", Number(num) !== n);
     });
 
-    // es lo q va cambindo la fase activando el css de cada una d ellas
     document.body.classList.remove("fase-1", "fase-2", "fase-3");
+
     document.body.classList.add("fase-" + n);
 
-    // menú de pasos: activo, y clicables los ya completados
-    pasos.forEach((p, i) => {
-      const activo = i === n - 1;
-      p.classList.toggle("is-active", activo); // se pone solo en el paso actual y en los anteriores, pero no en el último paso (confirmación) si es la fase 3
-      p.classList.toggle("clicable", i < n - 1 && n < 3); // te dice en qué paso estás actualmente, para que los lectores de pantalla lo sepan
-      if (activo) p.setAttribute("aria-current", "step");
-      else p.removeAttribute("aria-current");
+    // pasos
+    pasos.forEach((paso, indice) => {
+      const activo = indice === n - 1;
+
+      paso.classList.toggle("is-active", activo);
+
+      paso.classList.toggle("clicable", indice < n - 1 && n < 3);
+
+      if (activo) {
+        paso.setAttribute("aria-current", "step");
+      } else {
+        paso.removeAttribute("aria-current");
+      }
     });
 
+    //  limpiar error
     errorEl.textContent = "";
-    window.scrollTo({ top: 0, behavior: "auto" });
+
+    //  devolver arriba
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
   }
 
-  /* Volver a un paso anterior pulsando el menú (no desde la confirmación) */
-  pasos.forEach((p, i) => {
-    p.addEventListener("click", () => {
-      const destino = i + 1;
-      if (estado.fase < 3 && destino < estado.fase) irAFase(destino);
+  /* ==========================================================
+     PASOS CLICABLES
+     ========================================================== */
+
+  pasos.forEach((paso, indice) => {
+    paso.addEventListener("click", () => {
+      const destino = indice + 1;
+
+      if (estado.fase < 3 && destino < estado.fase) {
+        irAFase(destino);
+      }
     });
   });
 
+  // boton comprar
+  btnComprar.addEventListener("click", () => {
+    if (obtenerCantidadTotal() === 0) {
+      return;
+    }
+
+    irAFase(2);
+  });
+
+  // boton atras
   btnAnterior.addEventListener("click", () => {
     irAFase(1);
   });
 
-  // elegir entrada
-  document.getElementById("tickets").addEventListener("click", (e) => {
-    const boton = e.target.closest(".btn-add");
-    if (!boton) return;
-    // e.target es el elemento donde se hizo clic, y .closest(".btn-add") busca hacia arriba el botón .btn-add.
-    // Si el clic fue en cualquier otro sitio, boton es null y return sale de la función sin hacer nada.
-    const li = boton.closest("[data-id]");
-    estado.tipo = li.dataset.id;
-    selectTipo.value = estado.tipo;
-    actualizarTotal();
-    irAFase(2);
-    // guarda el id del dato seleccionado y pasa a la siguiente fase
-  });
+  // validar formulario
 
-  // formulario
-  function actualizarTotal() {
-    const t = catalogo[estado.tipo];
-    const total = t ? t.precio * estado.cantidad : 0;
-    contadorEl.textContent = estado.cantidad;
-    precioTotalEl.textContent = total + "€";
-  }
-
-  document.getElementById("sumar").addEventListener("click", () => {
-    if (estado.cantidad < MAX_ENTRADAS) estado.cantidad++;
-    actualizarTotal();
-  });
-
-  document.getElementById("restar").addEventListener("click", () => {
-    if (estado.cantidad > 1) estado.cantidad--;
-    actualizarTotal();
-  });
-
-  selectTipo.addEventListener("change", () => {
-    estado.tipo = selectTipo.value;
-    actualizarTotal();
-  });
-  // añade o resta entradas hast llegar al maximo
   function validar() {
     const nombre = inputNombre.value.trim();
+
     const correo = inputCorreo.value.trim();
+
     const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
 
-    if (nombre.length < 3) return "Escribe tu nombre y apellidos.";
-    if (!correoValido) return "Escribe un correo electrónico válido.";
-    if (!estado.tipo) return "Elige un tipo de entrada.";
+    if (nombre.length < 3) {
+      return "Escribe tu nombre y apellidos.";
+    }
+
+    if (!correoValido) {
+      return "Escribe un correo electrónico válido.";
+    }
+
+    if (obtenerCantidadTotal() === 0) {
+      return "Elige al menos una entrada.";
+    }
+
     return "";
   }
 
+  // crea el texto de la compra
+  function crearTextoCompra() {
+    const partes = [];
+
+    Object.entries(estado.carrito).forEach(([id, cantidad]) => {
+      if (cantidad <= 0) {
+        return;
+      }
+
+      const entrada = catalogo[id];
+
+      if (!entrada) {
+        return;
+      }
+
+      partes.push(cantidad + " x " + entrada.nombre);
+    });
+
+    return partes.join(" · ");
+  }
+
+  // confirma la compra
   function confirmarCompra() {
     const error = validar();
+
     if (error) {
       errorEl.textContent = error;
+
       return;
     }
 
-    // resumen (textContent: lo que escribe el usuario nunca se interpreta como HTML)
-    const t = catalogo[estado.tipo];
-    if (tituloFinal) tituloFinal.textContent = t.nombre;
-    if (datosFinal) {
-      datosFinal.textContent =
-        `${inputNombre.value.trim()} · ${estado.cantidad} x ${t.nombre} · ` +
-        `${t.precio * estado.cantidad}€`;
+    const textoCompra = crearTextoCompra();
+
+    //  final
+    if (tituloFinal) {
+      tituloFinal.textContent = "BLACKWORKS WEEKEND FESTIVAL";
     }
 
+    //  dtos de compra
+    if (datosFinal) {
+      datosFinal.textContent =
+        inputNombre.value.trim() +
+        " · " +
+        textoCompra +
+        " · " +
+        formatoPrecio(obtenerTotal());
+    }
+
+    // paso a fase 3
     irAFase(3);
   }
 
@@ -159,10 +459,13 @@
 
   [inputNombre, inputCorreo].forEach((input) => {
     input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") confirmarCompra();
+      if (e.key === "Enter") {
+        confirmarCompra();
+      }
     });
   });
 
-  actualizarTotal();
+  actualizarResumen();
+
   irAFase(1);
 })();
