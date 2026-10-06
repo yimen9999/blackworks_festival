@@ -1000,6 +1000,10 @@ body.tickets.fase-3 .navegacion {
   padding: 4px 0;
 }
 
+#fase2 .descargapdf:hover {
+  color: var(--secondary-color);
+}
+
 /* barra de atras y siguiente............. */
 /* hueco para que la barra fija no tape el contenido */
 body.tickets {

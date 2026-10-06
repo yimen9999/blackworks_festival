@@ -88,9 +88,7 @@
     irAFase(1);
   });
 
-  /* ==========================================================
-   FASE 1: ELEGIR ENTRADA
-   ========================================================== */
+  // elegir entrada
   document.getElementById("tickets").addEventListener("click", (e) => {
     const boton = e.target.closest(".btn-add");
     if (!boton) return;
@@ -104,9 +102,7 @@
     // guarda el id del dato seleccionado y pasa a la siguiente fase
   });
 
-  /* ==========================================================
-   FASE 2: FORMULARIO
-   ========================================================== */
+  // formulario
   function actualizarTotal() {
     const t = catalogo[estado.tipo];
     const total = t ? t.precio * estado.cantidad : 0;
@@ -167,7 +163,6 @@
     });
   });
 
-  /* ---------- Inicio ---------- */
   actualizarTotal();
   irAFase(1);
 })();
