@@ -14,7 +14,6 @@
   };
 
   // elementosssss
-  const pasos = document.querySelectorAll(".steps .step");
 
   const inputNombre = document.getElementById("nombre");
 
@@ -326,21 +325,6 @@
 
     document.body.classList.add("fase-" + n);
 
-    // pasos
-    pasos.forEach((paso, indice) => {
-      const activo = indice === n - 1;
-
-      paso.classList.toggle("is-active", activo);
-
-      paso.classList.toggle("clicable", indice < n - 1 && n < 3);
-
-      if (activo) {
-        paso.setAttribute("aria-current", "step");
-      } else {
-        paso.removeAttribute("aria-current");
-      }
-    });
-
     //  limpiar error
     errorEl.textContent = "";
 
@@ -350,20 +334,6 @@
       behavior: "auto",
     });
   }
-
-  /* ==========================================================
-     PASOS CLICABLES
-     ========================================================== */
-
-  pasos.forEach((paso, indice) => {
-    paso.addEventListener("click", () => {
-      const destino = indice + 1;
-
-      if (estado.fase < 3 && destino < estado.fase) {
-        irAFase(destino);
-      }
-    });
-  });
 
   // boton comprar
   btnComprar.addEventListener("click", () => {
@@ -469,3 +439,5 @@
 
   irAFase(1);
 })();
+
+// prueba de js
