@@ -520,170 +520,179 @@ img {
   cursor: pointer;
 }
 
+
+
+
 /* MEDIAQUERIES RESOPONSIVE pantallamedia */
 
 @media (min-width: 1101px) and (max-width: 1500px) {
+
+
   /* INFO */
 
-  .info-texto {
-    width: 40%;
-  }
+.info-texto {
+  width: 40%;
+}
 
-  .info-texto p {
-    font-size: 38px;
-  }
+.info-texto p {
+  font-size: 38px;
+}
 
-  .info-texto:first-child {
-    left: 100px;
-  }
+.info-texto:first-child {
+  left: 100px;
+}
 
-  .info-texto:last-child {
-    right: 100px;
-  }
+.info-texto:last-child {
+  right: 100px;
+}
 
-  /* ARTISTS */
 
-  .artistas {
-    padding: 60px 40px 100px;
-    min-height: 1200px;
-  }
+/* ARTISTS */
 
-  .artistas h2 {
-    font-size: 110px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    width: 90%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.artistas {
+  padding: 60px 40px 100px;
+  min-height: 1200px;
+}
 
-  .artistas-lineup {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 16px;
-  }
+.artistas h2 {
+  font-size: 110px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .fila-artistas {
-    font-size: 85px;
-  }
+.artistas-lineup {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 16px;
+}
 
-  .fila-artistas img {
-    width: 140px;
-    height: 90px;
-  }
+.fila-artistas {
+  font-size: 85px;
+}
 
-  .fila-2 img:first-of-type {
-    width: 250px;
-  }
+.fila-artistas img {
+  width: 140px;
+  height: 90px;
+}
 
-  .fila-3 img {
-    width: 200px;
-  }
+.fila-2 img:first-of-type {
+  width: 250px;
+}
 
-  .fila-4 img {
-    width: 650px;
-  }
+.fila-3 img {
+  width: 200px;
+}
 
-  .fila-8 img {
-    width: 350px;
-  }
+.fila-4 img {
+  width: 650px;
+}
 
-  .fila-9 img:first-of-type {
-    width: 250px;
-  }
+.fila-8 img {
+  width: 350px;
+}
 
-  /* MERCH */
+.fila-9 img:first-of-type {
+  width: 250px;
+}
 
-  .merch {
-    padding: 70px 40px 45px;
-  }
+/* MERCH */
 
-  .merch-titulo {
-    font-size: 26px;
-    margin-left: 20px;
-    margin-bottom: 40px;
-  }
+.merch {
+  padding: 70px 40px 45px;
+}
 
-  .merch-galeria {
-    width: 90%;
-    margin: 0 auto;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 25px;
-    row-gap: 30px;
-  }
+.merch-titulo {
+  font-size: 26px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
 
-  .merch-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 350 / 450;
-  }
+.merch-galeria {
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  row-gap: 30px;
+}
 
-  .merch-caja figcaption {
-    font-size: 13px;
-  }
+.merch-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 350 / 450;
+}
 
-  /* DANCE */
+.merch-caja figcaption {
+  font-size: 13px;
+}
 
-  .dance {
-    padding: 150px 40px;
-  }
+/* DANCE */
 
-  .dance-texto p {
-    font-size: 15vw;
-    margin-bottom: 20px;
-  }
+.dance {
+  padding: 150px 40px;
+}
+
+.dance-texto p {
+  font-size: 15vw;
+  margin-bottom: 20px;
+}
+
 }
 
 /* Tablet */
 
 @media (min-width: 600px) and (max-width: 1100px) {
-  /* NAVBAR */
 
-  .navbar {
-    padding: 0 18px;
-  }
 
-  .menu {
-    font-size: 4.3vw;
-  }
+/* NAVBAR */
 
-  .logo img {
-    width: 35vw;
-  }
+.navbar {
+  padding: 0 18px;
+}
 
-  .entradas {
-    font-size: 1.9vw;
-    padding: 8px 29px;
-  }
+.menu {
+  font-size: 4.3vw;
+}
 
-  /* MENU HAMBURGUESA */
+.logo img {
+  width: 35vw;
+}
 
-  .menu-cerrar {
-    left: 18px;
-    top: 25px;
-    font-size: 4.8vw;
-  }
+.entradas {
+  font-size: 1.9vw;
+  padding: 8px 29px;
+}
 
-  .menu-logo {
-    top: 18px;
-  }
+/* MENU HAMBURGUESA */
 
-  .menu-logo img {
-    width: 36vw;
-    max-width: 320px;
-  }
+.menu-cerrar {
+  left: 18px;
+  top: 25px;
+  font-size: 4.8vw;
+}
 
-  .menuopciones {
-    margin-left: 18px;
-    margin-top: 30px;
-  }
+.menu-logo {
+  top: 18px;
+}
 
-  .menuopciones a {
-    font-size: 8.5vw;
-    margin-bottom: 20px;
-  }
+.menu-logo img {
+  width: 36vw;
+  max-width: 320px;
+}
+
+.menuopciones {
+  margin-left: 18px;
+  margin-top: 30px;
+}
+
+.menuopciones a {
+  font-size: 8.5vw;
+  margin-bottom: 20px;
+}
 
   /* HOME */
 
@@ -699,205 +708,207 @@ img {
     font-size: 18px;
   }
 
-  /* carruselTICKETS */
+/* carruselTICKETS */
 
-  .ticketscarrusel {
-    padding: 15px 0;
-  }
+.ticketscarrusel {
+  padding: 15px 0;
+}
 
-  .ticketscarrusel-grupo {
-    gap: 40px;
-    padding-right: 40px;
-  }
+.ticketscarrusel-grupo {
+  gap: 40px;
+  padding-right: 40px;
+}
 
-  .ticketscarrusel-texto span {
-    font-size: 5cqh;
-  }
+.ticketscarrusel-texto span {
+  font-size: 5cqh;
+}
 
-  /* INFO */
+/* INFO */
 
-  .info {
-    height: 550px;
-    padding: 30px 40px;
-  }
+.info {
+  height: 550px;
+  padding: 30px 40px;
+}
 
-  .info-texto {
-    width: 42%;
-  }
+.info-texto {
+  width: 42%;
+}
 
-  .info-texto p {
-    font-size: 4.2vw;
-  }
+.info-texto p {
+  font-size: 4.2vw;
+}
 
-  .info-texto:first-child {
-    top: 80px;
-    left: 60px;
-  }
+.info-texto:first-child {
+  top: 80px;
+  left: 60px;
+}
 
-  .info-texto:last-child {
-    right: 60px;
-    bottom: 100px;
-  }
+.info-texto:last-child {
+  right: 60px;
+  bottom: 100px;
+}
 
-  /* CARRUSEL LOGOS */
+/* CARRUSEL LOGOS */
 
-  .logo-grupo {
-    gap: 40px;
-    margin-right: 40px;
-  }
+.logo-grupo {
+  gap: 40px;
+  margin-right: 40px;
+}
 
-  .logo-tira img {
-    width: 5.5vw;
-    max-width: 60px;
-  }
+.logo-tira img {
+  width: 5.5vw;
+  max-width: 60px;
+}
 
-  /* ARTISTS */
+/* ARTISTS */
 
-  .artistas {
-    padding: 50px 25px 80px;
-    min-height: 950px;
-  }
+.artistas {
+  padding: 50px 25px 80px;
+  min-height: 950px;
+}
 
-  .artistas h2 {
-    font-size: 10vw;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    width: 90%;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.artistas h2 {
+  font-size: 10vw;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  width: 90%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .artistas-lineup {
-    width: 90%;
-    max-width: 850px;
-    gap: 12px;
-  }
+.artistas-lineup {
+  width: 90%;
+  max-width: 850px;
+  gap: 12px;
+}
 
-  .fila-artistas {
-    font-size: 6.8vw;
-  }
+.fila-artistas {
+  font-size: 6.8vw;
+}
 
-  .fila-artistas img {
-    width: 90px;
-    height: 65px;
-  }
+.fila-artistas img {
+  width: 90px;
+  height: 65px;
+}
 
-  .fila-2 img:first-of-type {
-    width: 170px;
-  }
+.fila-2 img:first-of-type {
+  width: 170px;
+}
 
-  .fila-3 img {
-    width: 140px;
-  }
+.fila-3 img {
+  width: 140px;
+}
 
-  .fila-4 img {
-    width: 55vw;
-    max-width: 450px;
-  }
+.fila-4 img {
+  width: 55vw;
+  max-width: 450px;
+}
 
-  .fila-8 img {
-    width: 40vw;
-    max-width: 250px;
-  }
+.fila-8 img {
+  width: 40vw;
+  max-width: 250px;
+}
 
-  .fila-9 img:first-of-type {
-    width: 170px;
-  }
+.fila-9 img:first-of-type {
+  width: 170px;
+}
 
-  /* MERCH */
+/* MERCH */
 
-  .merch {
-    padding: 60px 30px 40px;
-  }
+.merch {
+  padding: 60px 30px 40px;
+}
 
-  .merch-titulo {
-    font-size: 2.5vw;
-    margin-left: 20px;
-    margin-bottom: 35px;
-  }
+.merch-titulo {
+  font-size: 2.5vw;
+  margin-left: 20px;
+  margin-bottom: 35px;
+}
 
-  .merch-galeria {
-    width: 90%;
-    margin: 0 auto;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    row-gap: 30px;
-  }
+.merch-galeria {
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
 
-  .merch-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 350 / 450;
-  }
+.merch-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 350 / 450;
+}
 
-  .merch-caja figcaption {
-    font-size: 1.3vw;
-    margin-top: 10px;
-  }
+.merch-caja figcaption {
+  font-size: 1.3vw;
+  margin-top: 10px;
+}
 
-  .merch-caja figcaption + figcaption {
-    font-size: 1.2vw;
-    margin-top: 3px;
-  }
+.merch-caja figcaption + figcaption {
+  font-size: 1.2vw;
+  margin-top: 3px;
+}
 
-  /* DANCE */
+/* DANCE */
 
-  .dance {
-    padding: 120px 30px;
-  }
+.dance {
+  padding: 120px 30px;
+}
 
-  .dance-texto p {
-    font-size: 12vw;
-    margin-bottom: 15px;
-  }
+.dance-texto p {
+  font-size: 12vw;
+  margin-bottom: 15px;
+}
 
-  /* FOOTER */
+/* FOOTER */
 
-  .footer {
-    height: 350px;
-    padding-top: 70px;
-  }
+.footer {
+  height: 350px;
+  padding-top: 70px;
+}
 
-  .footer-redes {
-    gap: 16px;
-  }
+.footer-redes {
+  gap: 16px;
+}
 
-  .footer-redes a {
-    font-size: 20px;
-  }
+.footer-redes a {
+  font-size: 20px;
+}
 
-  .footer-enlaces {
-    gap: 60px;
-    margin-top: 22px;
-  }
+.footer-enlaces {
+  gap: 60px;
+  margin-top: 22px;
+}
 
-  .footer-columna p {
-    margin-bottom: 10px;
-    font-size: 13px;
-  }
+.footer-columna p {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
 
-  .footer-columna a {
-    font-size: 11px;
-    margin-bottom: 10px;
-  }
+.footer-columna a {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
 
-  .footer-copy {
-    bottom: 65px;
-    font-size: 9px;
-  }
+.footer-copy {
+  bottom: 65px;
+  font-size: 9px;
+}
 
-  .volver-arriba {
-    bottom: 18px;
-    left: 18px;
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
-  }
+.volver-arriba {
+  bottom: 18px;
+  left: 18px;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+}
+
 }
 
 /* movil */
 @media (max-width: 599px) {
+
   /* HOME */
 
   .home-texto p:first-child {
@@ -911,6 +922,7 @@ img {
   .home-texto p:last-child {
     font-size: 14px;
   }
+
 
   /* NAVBAR */
 
@@ -929,480 +941,492 @@ img {
   }
 
   .entradas {
-    display: none;
+    display: none
   }
 
   /* MENU HAMBURGUESA */
 
-  .menu-cerrar {
-    left: 12px;
-    top: 20px;
-    font-size: 30px;
-  }
+.menu-cerrar {
+  left: 12px;
+  top: 20px;
+  font-size: 30px;
+}
 
-  .menu-logo {
-    top: 37px;
-  }
+.menu-logo {
+  top: 37px;
+}
 
-  .menu-logo img {
-    width: 45vw;
-    max-width: 230px;
-  }
+.menu-logo img {
+  width: 45vw;
+  max-width: 230px;
+}
 
-  .menuopciones {
-    margin-left: 12px;
-    margin-top: 25px;
-  }
+.menuopciones {
+  margin-left: 12px;
+  margin-top: 25px;
+}
 
-  .menuopciones a {
-    font-size: 12vw;
-    margin-bottom: 16px;
-  }
+.menuopciones a {
+  font-size: 12vw;
+  margin-bottom: 16px;
+}
 
   /* CARRUSEL TICKETS */
 
-  .ticketscarrusel {
-    padding: 10px 0;
-  }
-
-  .ticketscarrusel-grupo {
-    gap: 25px;
-    padding-right: 25px;
-  }
-
-  .ticketscarrusel-texto span {
-    font-size: 8vw;
-  }
-
-  /* INFO */
-
-  .info {
-    height: auto;
-    padding: 60px 30px 70px;
-    margin-top: 5px;
-  }
-
-  .info-texto {
-    position: static;
-    width: 100%;
-  }
-
-  .info-texto p {
-    font-size: 8vw;
-  }
-
-  .info-texto:first-child {
-    margin-bottom: 60px;
-  }
-
-  .info-texto:last-child {
-    text-align: left;
-  }
-
-  /* CARRUSEL LOGOS */
-
-  .logo-grupo {
-    gap: 25px;
-    margin-right: 25px;
-  }
-
-  .logo-tira img {
-    width: 15vw;
-    max-width: 45px;
-  }
-
-  /* ARTISTS */
-
-  .artistas {
-    padding: 40px 15px 70px;
-    min-height: auto;
-  }
-
-  .artistas h2 {
-    font-size: 18vw;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .artistas-lineup {
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 14px 0;
-  }
-
-  .fila-artistas {
-    display: contents;
-  }
-
-  .fila-artistas span,
-  .fila-artistas img {
-    align-self: center;
-    justify-self: center;
-  }
-
-  .fila-artistas span {
-    font-size: 10vw;
-    line-height: 1;
-    text-align: center;
-    min-width: 0;
-  }
-
-  .fila-artistas img {
-    width: 28vw;
-    max-width: 160px;
-    height: auto;
-    aspect-ratio: 1.7 / 1;
-    object-fit: cover;
-  }
-
-  .fila-1 span:first-child {
-    margin-right: 10px;
-  }
-
-  .fila-1 span:nth-child(2) {
-    margin-right: 15px;
-  }
-
-  .fila-9 span {
-    margin-left: 40px;
-  }
-
-  .fila-9 img:last-child {
-    transform: translateX(13px);
-  }
-
-  .fila-8 img {
-    width: 160px;
-    height: 94px;
-    object-fit: cover;
-  }
-
-  .fila-3 img {
-    width: 160px;
-    height: 94px;
-    object-fit: cover;
-  }
-
-  /* MERCH */
-
-  .merch {
-    padding: 50px 15px 35px;
-  }
-
-  .merch-titulo {
-    font-size: 5vw;
-    margin-left: 5px;
-    margin-bottom: 30px;
-  }
-
-  .merch-galeria {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 12px;
-    row-gap: 25px;
-  }
-
-  .merch-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 350 / 450;
-  }
-
-  .merch-caja figcaption {
-    font-size: 2.8vw;
-    margin-top: 8px;
-  }
-
-  .merch-caja figcaption + figcaption {
-    font-size: 2.6vw;
-    margin-top: 2px;
-  }
-
-  /* DANCE */
-
-  .dance {
-    padding: 25px 15px 50px;
-  }
-
-  .dance-texto p {
-    font-size: 13vw;
-    margin-bottom: 10px;
-  }
-
-  /* FOOTER */
-
-  .footer {
-    height: 280px;
-    padding-top: 50px;
-  }
-
-  .footer-redes {
-    gap: 2.5vw;
-  }
-
-  .footer-redes a {
-    font-size: 4vw;
-  }
-
-  .footer-enlaces {
-    gap: 8vw;
-    margin-top: 18px;
-  }
-
-  .footer-columna p {
-    margin-bottom: 7px;
-    font-size: 2.7vw;
-  }
-
-  .footer-columna a {
-    font-size: 2.2vw;
-    margin-bottom: 7px;
-  }
-
-  .footer-copy {
-    bottom: 80px;
-    font-size: 1.8vw;
-  }
-
-  .volver-arriba {
-    bottom: 13px;
-    left: 13px;
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-  }
+.ticketscarrusel {
+  padding: 10px 0;
 }
 
-/* LUZZZZZZ */
-
-.btn-add,
-.descargapdf {
-  border: 0;
-  border-radius: var(--radio-boton);
-  padding: var(--padding-boton);
-  font-family: var(--primary-font);
-  font-weight: 800;
-  text-transform: uppercase;
-  cursor: pointer;
+.ticketscarrusel-grupo {
+  gap: 25px;
+  padding-right: 25px;
 }
 
-.btn-vip {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+.ticketscarrusel-texto span {
+  font-size: 8vw;
 }
 
-.btn-vip:hover {
-  background-color: var(--white);
-  transition: 0.3s;
-}
+/* INFO */
 
-.btn-general {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-
-.btn-general:hover {
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-.btn-undia {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-.btn-undia:hover {
-  background-color: var(--white);
-  transition: 0.3s;
-}
-
-.btn-bonocopas {
-  background-color: var(--white);
-  color: var(--primary-color);
-}
-
-.btn-bonocopas:hover {
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-/* nav de guia de pasos en la compra  */
-
-.steps {
-  position: fixed;
-  top: var(--nav-height);
-  display: flex;
-  display: flex;
-  justify-content: space-between;
-  left: 0;
-  right: 0;
-  z-index: 900;
-  display: flex;
-  gap: 12px;
-  padding: 16px 50px;
-  background: transparent; /* /* revisar despues de js pq da problemas */
-  /* position: sticky; */
-  /* position: sticky; */
-}
-
-.step {
-  flex: 1;
-  text-align: center;
-  padding: 10px 14px;
-  border: 2px solid var(--secondary-color);
-  border-radius: var(--radio-boton);
-  background: var(--secondary-color);
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-body.fase-2 {
-  background: var(--white);
-}
-body.fase-2 .steps {
-  background: var(--white);
-}
-/* body.tickets.fase-3 {
-  padding-top: var(--nav-height);
-  padding-bottom: 0;
-  background: var(--ticketblue); */
-/* } */
-body.fase-3 .steps {
-  background: transparent; /* flotan sobre la imagen */
-  padding: 16px 24px;
-}
-
-/* paso actual: contorno negro y fondo rojo */
-.step.is-active {
-  background: var(--primary-color);
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
-  font-weight: 700;
-}
-
-/* tipos de entradas */
-.cajas {
-  height: 900px;
-  padding: 1px 25px 24px; /* arriba, lados, abajo */
+.info {
+  height: auto;
+  padding: 60px 30px 70px;
   margin-top: 5px;
 }
 
-.container {
-  max-width: 100vh;
+.info-texto {
+  position: static;
+  width: 100%;
+}
+
+.info-texto p {
+  font-size: 8vw;
+}
+
+.info-texto:first-child {
+  margin-bottom: 60px;
+}
+
+.info-texto:last-child {
+  text-align: left;
+}
+
+/* CARRUSEL LOGOS */
+
+.logo-grupo {
+  gap: 25px;
+  margin-right: 25px;
+}
+
+.logo-tira img {
+  width: 15vw;
+  max-width: 45px;
+}
+
+
+/* ARTISTS */
+
+.artistas {
+  padding: 40px 15px 70px;
+  min-height: auto;
+}
+
+.artistas h2 {
+  font-size: 18vw;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  text-align: center;
+}
+
+.artistas-lineup {
+  width: 100%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px 0;
+}
+
+.fila-artistas {
+  display: contents;
+}
+
+.fila-artistas span,
+.fila-artistas img {
+  align-self: center;
+  justify-self: center;
+}
+
+.fila-artistas span {
+  font-size: 10vw;
+  line-height: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.fila-artistas img {
+  width: 28vw;
+  max-width: 160px;
+  height: auto;
+  aspect-ratio: 1.7 / 1;
+  object-fit: cover;
+}
+
+.fila-1 span:first-child {
+  margin-right: 10px;
+}
+
+.fila-1 span:nth-child(2) {
+  margin-right: 15px;
+}
+
+.fila-9 span {
   margin-left: 40px;
 }
+
+.fila-9 img:last-child {
+  transform: translateX(13px);
+}
+
+.fila-8 img {
+  width: 160px;
+  height: 94px;
+  object-fit: cover;
+}
+
+.fila-3 img {
+  width: 160px;
+  height: 94px;
+  object-fit: cover;
+}
+
+
+/* MERCH */
+
+.merch {
+  padding: 50px 15px 35px;
+}
+
+.merch-titulo {
+  font-size: 5vw;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+.merch-galeria {
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 12px;
+  row-gap: 25px;
+}
+
+.merch-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 350 / 450;
+}
+
+.merch-caja figcaption {
+  font-size: 2.8vw;
+  margin-top: 8px;
+}
+
+.merch-caja figcaption + figcaption {
+  font-size: 2.6vw;
+  margin-top: 2px;
+}
+
+/* DANCE */
+
+.dance {
+  padding: 25px 15px 50px;
+}
+
+
+.dance-texto p {
+  font-size: 13vw;
+  margin-bottom: 10px;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  height: 280px;
+  padding-top: 50px;
+}
+
+.footer-redes {
+  gap: 2.5vw;
+}
+
+.footer-redes a {
+  font-size: 4vw;
+}
+
+.footer-enlaces {
+  gap: 8vw;
+  margin-top: 18px;
+}
+
+.footer-columna p {
+  margin-bottom: 7px;
+  font-size: 2.7vw;
+}
+
+.footer-columna a {
+  font-size: 2.2vw;
+  margin-bottom: 7px;
+}
+
+.footer-copy {
+  bottom: 80px;
+  font-size: 1.8vw;
+}
+
+.volver-arriba {
+  bottom: 13px;
+  left: 13px;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+}
+}
+
+
+
+
+
+/* LUZZZZZZ */
+
+
+
+/* fase entradas */
+body.tickets {
+  padding-top: calc(var(--nav-height) + 78px);
+}
+
+.cajas {
+  width: 100%;
+  min-height: calc(100vh - var(--nav-height) - 78px);
+  padding: 35px 45px 80px;
+  margin: 0;
+}
+
+.cajas .container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+
+.tickets-contenido {
+  display: grid;
+  grid-template-columns:minmax(0, 1fr) 380px;
+  gap: 40px;
+  align-items: start;
+}
+
+
+/* lista entradas */
+
+.entradas-lista {
+  min-width: 0;
+}
+
+.entradas-titulo {
+  margin-bottom: 25px;
+}
+
+.entradas-titulo h1 {
+  font-family: var(--secundary-font);
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 0.95;
+  color: var(--secondary-color);
+}
+
+
 
 .ticketslista {
   list-style: none;
   display: grid;
-  gap: 50px; /* espacio entre cada ticket */
+  gap: 28px;
+  width: 100%;
 }
+
+/* tickets */
 
 .ticket,
 .ticket-dia,
 .ticket-bonocopas,
 .ticket-general {
   display: flex;
-  gap: 14px;
-  min-height: 100px;
+  width: 100%;
+  min-width: 0;
+  min-height: 190px;
+  gap: 0;
   color: var(--ticket-color);
-}
-
-.ticket.vip {
-  --ticket-bg: var(--secondary-color);
-  --ticket-color: #fff;
-  /* --btn-bg: var(--primary-color);
-  --btn-color: #fff; */
-}
-.ticket-general {
-  --ticket-bg: var(--white);
-  --ticket-color: var(--secondary-color); /* texto negro */
-}
-
-.ticket-dia {
-  --ticket-bg: var(--ticketred);
-  --ticket-color: #fff;
-  /* --btn-bg: var(--secondary-color);
-  --btn-color: var(--primary-color); */
-}
-
-.ticket-bonocopas {
-  --ticket-bg: var(--ticketblue);
-  --ticket-color: #fff;
-  /* --btn-bg: #fff;
-  --btn-color: var(--primary-color); */
-}
-
-.ticket-main {
-  position: relative;
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  column-gap: 12px;
-  row-gap: 8px;
-  padding: 16px 24px;
-  background: var(--ticket-bg);
-  width: 1140px;
-  height: 150px;
-  /* border-radius: 20px; */
-}
-
-.ticket-stub {
-  position: relative;
-  flex: 0 0 150px; /* define el ancho */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  background: var(--ticket-bg);
-}
-
-.ticket,
-.ticket-dia,
-.ticket-bonocopas,
-.ticket-general {
-  transition: transform 0.25s ease;
+  transition:
+    transform 0.25s ease;
 }
 
 .ticket:hover,
 .ticket-dia:hover,
 .ticket-bonocopas:hover,
 .ticket-general:hover {
-  transform: scale(1.03);
-}
-.ticket-vip-stub {
-  --ticket-bg: var(--secondary-color);
-  --ticket-color: #fff;
+  transform: translateY(-4px);
 }
 
-.ticket-general-stub {
+
+/* COLORES */
+
+.ticket.vip {
+  --ticket-bg: var(--secondary-color);
+  --ticket-color: var(--white);
+}
+
+.ticket-general {
   --ticket-bg: var(--white);
   --ticket-color: var(--secondary-color);
 }
 
-.ticket-undia-stub {
+.ticket-dia {
   --ticket-bg: var(--ticketred);
-  --ticket-color: #fff;
+  --ticket-color: var(--white);
 }
 
-.ticket-bonocopas-stub {
+.ticket-bonocopas {
   --ticket-bg: var(--ticketblue);
-  --ticket-color: #fff;
+  --ticket-color: var(--white);
 }
+
+
+.ticket-main {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px 32px;
+  background: var(--ticket-bg);
+  overflow: hidden;
+}
+
 
 /* bordes */
 
 .ticket-main::before,
-.ticket-main::after,
+.ticket-main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  pointer-events: none;
+  background:
+  radial-gradient(
+  circle at 0 50%,
+  var(--primary-color) 4px,
+  transparent 4.5px )0 0 / 10px 14px repeat-y;
+}
+
+.ticket-main::before {
+  left: 0;
+}
+
+.ticket-main::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+
+/* infotexto */
+
+.ticket-texto {
+  min-width: 0;
+  flex: 1;
+}
+
+.ticket-texto h2 {
+  margin-bottom: 12px;
+  font-family: var(--primary-font);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.ticket-texto p {
+  max-width: 720px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+
+/* controles cantidad */
+
+.controles-ticket {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  border: 2px solid var(--secondary-color);
+  background: var(--white);
+  color: var(--secondary-color);
+  border-radius: var(--radio-boton);
+  overflow: hidden;
+}
+
+.controles-ticket button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.controles-ticket button:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.contador-ticket {
+  width: 45px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+
+
+/* stub tickets */
+.ticket-stub {
+  position: relative;
+  flex: 0 0 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: var(--ticket-bg);
+  overflow: hidden;
+}
+
 .ticket-stub::before,
 .ticket-stub::after {
   content: "";
@@ -1411,7 +1435,8 @@ body.fase-3 .steps {
   bottom: 0;
   width: 10px;
   pointer-events: none;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 0 50%,
       var(--primary-color) 4px,
       transparent 4.5px
@@ -1419,148 +1444,344 @@ body.fase-3 .steps {
     0 0 / 10px 14px repeat-y;
 }
 
-.ticket-main::before,
 .ticket-stub::before {
   left: 0;
 }
 
-.ticket-main::after,
 .ticket-stub::after {
   right: 0;
+
   transform: scaleX(-1);
 }
-/* botones de paso de compra  */
-body.fase-2 .step,
-body.fase-3 .step {
-  background: #000;
-  border-color: #000;
-  color: var(--ticketred, #e8130c);
-  border-radius: 999px;
+
+.ticket-stub img {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
 }
 
-body.fase-2 .step.is-active,
-body.fase-3 .step.is-active {
-  background: var(--ticketred, #e8130c);
-  border-color: var(--ticketred, #e8130c);
-  color: #000;
-}
-body.fase-3 {
-  padding-bottom: 0; /* sin barra Atrás/Siguiente */
+
+/* COLORES DE LOS STUB */
+
+.ticket-vip-stub {
+  --ticket-bg: var(--secondary-color);
 }
 
-body.fase-3 .steps {
-  position: absolute;
-  top: calc(var(--nav-height) + 16px);
-  left: 0;
-  right: 0;
-  z-index: 5;
-  max-width: none;
-  margin: 0;
-  padding: 0 24px;
+.ticket-general-stub {
+  --ticket-bg: var(--white);
 }
 
-/* formulario */
-.error-form {
-  color: var(--primary-color);
-  font-size: 0.8rem;
-  font-weight: 800;
-  min-height: 1.2em;
+.ticket-undia-stub {
+  --ticket-bg: var(--ticketred);
 }
-#fase1 select {
+
+.ticket-bonocopas-stub {
+  --ticket-bg: var(--ticketblue);
+}
+
+
+/* resumen */
+
+.resumen {
+  position: sticky;
   width: 100%;
-  height: 42px;
-  padding: 0 14px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: #fff;
-  font-family: var(--primary-font);
-  font-size: 0.75rem;
+  padding: 28px;
+  background: var(--white);
+  color: var(--secondary-color);
+  margin-top: 90px;
 }
 
-#fase1 {
-  background-color: var(--white);
-  padding: 24px;
-  margin-top: 20px;
-  height: calc(100dvh - var(--nav-height));
-}
-#fase1 .formulario {
-  display: grid;
-  gap: 16px;
-  width: 100%;
-  max-width: 320px;
-  margin: 80px auto 0;
-}
 
-#fase1 input {
-  width: 100%;
-  height: 42px;
-  padding: 0 14px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: #fff;
-  color: #000;
-  font-family: var(--primary-font);
-  font-size: 0.75rem;
-}
+/* CABECERA compra */
 
-#fase1 .cantidad {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 42px;
-  padding: 0 14px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: #fff;
-  color: #000;
-  font-family: var(--primary-font);
-  font-size: 0.75rem;
-}
-
-#fase1 .controles {
+.resumen-cabecera {
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 30px;
 }
 
-#fase1 .controles button {
-  border: 0;
-  background: none;
-  font-family: var(--primary-font);
-  font-size: 1.2rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 4px 6px;
-}
 
-#fase1 #contador {
-  min-width: 1.5ch;
-  text-align: center;
+
+.resumen-cabecera h2 {
+  font-size: 1.7rem;
   font-weight: 800;
 }
 
+
+/* RESUMEN VACÍO */
+
+.resumen-vacio {
+  margin-bottom: 28px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* ENTRADAS DEL RESUMEN */
+
+.resumen-entradas {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.resumen-entrada {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.resumen-entrada-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.resumen-entrada-nombre {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.resumen-entrada-cantidad {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.resumen-entrada-precio {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+
+
+
+/* DATOS */
+
+.resumen-datos {
+  display: grid;
+  gap: 14px;
+}
+
+.resumen-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 0.85rem;
+}
+
+.resumen-fila strong {
+  font-weight: 800;
+}
+
+.resumen-fila.gestion {
+  align-items: flex-start;
+}
+
+.resumen-fila.gestion > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resumen-fila small {
+  color: #666;
+  font-size: 0.7rem;
+}
+
+
+/* TOTAL */
+
+.resumen-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: var(--radio-boton);
+  background: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.resumen-total strong {
+  font-size: 1.25rem;
+}
+
+
+/* BOTÓN COMPRAR */
+
+.btn-comprar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 18px;
+  border: 3px solid var(--secondary-color);
+  border-radius: var(--radio-boton);
+  background: var(--secondary-color);
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    opacity 0.25s;
+}
+
+.btn-comprar:hover:not(:disabled) {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-comprar:disabled {
+  background: #eeeeee;
+  color: #777;
+  border-color: #777;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+
+/* FASE 2 */
+
+#fase1 {
+  width: 100%;
+  min-height: calc(100vh - var(--nav-height));
+  margin: 0;
+  padding:45px 30px 100px;
+  background: var(--white);
+}
+
+#fase1 .formulario {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto 0;
+}
+
+
+/* TÍTULO */
+
+.formulario-titulo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 5px;
+}
+
+
+.formulario-titulo h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+.formulario-texto {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+/* INPUTS */
+
+#fase1 input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--radio-boton);
+  background: var(--white);
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+  font-size: 0.8rem;
+}
+
+#fase1 input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+
+/* SELECT OCULTO */
+
+#fase1 #tipo {
+  display: none;
+}
+
+
+/* RESUMEN DEL FORMULARIO */
+
+.compra-resumen {
+  padding: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--radio-boton);
+  background: #f5f5f5;
+}
+
+.compra-resumen h2 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.formulario-entrada {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.8rem;
+}
+
+.formulario-entrada:last-child {
+  border-bottom: 0;
+}
+
+
+/* TOTAL FORMULARIO */
+
 #fase1 .total {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+#fase1 .total span {
+  font-size: 1rem;
+}
+
+
+/* ERROR */
+
+.error-form {
+  min-height: 1.2em;
+  color: var(--primary-color);
   font-size: 0.8rem;
   font-weight: 800;
 }
 
-#fase1 input:focus-visible,
-#fase1 .controles button:focus-visible {
-  outline: 3px solid var(--ticketred, #e8130c);
-  outline-offset: 2px;
-}
+
+/* CONFIRMAR */
 
 #fase1 .btn-confirmar {
-  justify-self: start;
-  border: 0;
-  border-radius: 10px;
-  padding: 10px 24px;
+  padding: 12px 30px;
+  border-radius: var(--radio-boton);
   background: var(--primary-color);
   color: var(--secondary-color);
   font-family: var(--primary-font);
   font-size: 0.85rem;
   font-weight: 800;
   cursor: pointer;
+
   transition:
     background-color 0.25s,
     color 0.25s;
@@ -1571,10 +1792,8 @@ body.fase-3 .steps {
   color: var(--primary-color);
 }
 
-#fase1 .btn-confirmar:focus-visible {
-  outline: 3px solid var(--ticketred);
-  outline-offset: 2px;
-}
+
+/* fase confirmar */
 
 body.tickets.fase-3 {
   padding-top: var(--nav-height);
@@ -1587,10 +1806,10 @@ body.tickets.fase-3 .navegacion {
 }
 
 #fase2 {
+  width: 100%;
   padding: 0;
   margin: 0;
   max-width: none;
-  width: 100%;
 }
 
 #fase2 .tarjeta {
@@ -1601,12 +1820,10 @@ body.tickets.fase-3 .navegacion {
     "imagen imagen"
     "gracias codigo";
   width: 100%;
-  max-width: none;
-  margin: 0;
   height: calc(100dvh - var(--nav-height));
   overflow: hidden;
-  background: var(--ticketblue, #4b5a85);
-  color: #000;
+  background: var(--ticketblue);
+  color: var(--secondary-color);
 }
 
 #fase2 .imagenfinal {
@@ -1630,14 +1847,13 @@ body.tickets.fase-3 .navegacion {
 #fase2 .gracias {
   grid-area: gracias;
   align-self: center;
-  min-height: 0;
-  padding: 0 0 0 56px;
+  padding-left: 56px;
 }
 
 #fase2 .gracias h1 {
+  margin-bottom: 8px;
   font-size: 3rem;
   line-height: 1.1;
-  margin: 0 0 8px;
 }
 
 #fase2 .gracias p {
@@ -1653,34 +1869,28 @@ body.tickets.fase-3 .navegacion {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 0 0 0 56px;
-  padding-right: 56px;
+  padding-right: 50px;
 }
 
 #fase2 .codigo img {
   height: clamp(80px, 18vh, 200px);
   width: auto;
   aspect-ratio: 1;
-  background: #fff;
+  background: var(--white);
 }
 
 #fase2 .descargapdf {
+  border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--white);
+  font-family: var(--primary-font);
   font-size: 0.75rem;
-  padding: 4px 0;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-#fase2 .descargapdf:hover {
-  color: var(--secondary-color);
-}
 
-/* barra de atras y siguiente............. */
-/* hueco para que la barra fija no tape el contenido */
-body.tickets {
-  padding-top: calc(var(--nav-height) + 74px);
-}
-
+/* boton atras */
 .navegacion {
   position: fixed;
   left: 0;
@@ -1690,17 +1900,14 @@ body.tickets {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  padding: 16px 50px;
-  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  background: transparent;
-  border: 0;
-  pointer-events: none; /* para q no interfiera con el foco de los botones */
+  padding:16px 50px calc(16px + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
 }
+
 .navegacion .boton {
   pointer-events: auto;
-  /* /* para q los botones reciban clicks */
 }
+
 .boton {
   min-width: 140px;
   padding: var(--padding-boton);
@@ -1708,547 +1915,124 @@ body.tickets {
   font-family: var(--primary-font);
   font-size: 0.85rem;
   font-weight: 800;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition:
-    background-color 0.25s,
-    color 0.25s,
-    opacity 0.25s;
 }
+
 #anterior {
-  background: var(--white);
-  color: var(--secondary-color);
-  border: 3px solid var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
+
 #anterior:hover {
-  background: var(--secondary-color);
-  color: var(--primary-color);
-}
-#siguiente {
-  margin-left: auto; /* a la derecha aunque Atrás esté oculto */
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  border: 3px solid var(--secondary-color);
-}
-#siguiente:hover:not(:disabled) {
-  background: var(--white);
-  border-color: var(--white);
-}
-body.fase-2 #siguiente {
   background: var(--primary-color);
   color: var(--secondary-color);
-  border-color: var(--primary-color);
-}
-body.fase-2 #siguiente:hover {
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  border-color: var(--secondary-color);
-}
-/* ---------- Estados ---------- */
-.boton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.boton:focus-visible {
-  outline: 3px solid var(--ticketblue);
-  outline-offset: 2px;
 }
 
-/* media queries */
-/* ==========================================================
-   MEDIA QUERIES - pegar AL FINAL de style.css
-   (tienen que ir después de todo lo demás para que ganen
-   a las reglas base con la misma especificidad)
-   ========================================================== */
+/* olultar */
 
-/* ----------------------------------------------------------
-   PORTÁTIL: 1101px - 1500px
-   ---------------------------------------------------------- */
-@media (min-width: 1101px) and (max-width: 1500px) {
-  :root {
-    --nav-height: 95px;
-  }
-
-  /* nav */
-  .logo img,
-  .menu-logo img {
-    width: 260px;
-  }
-
-  .menu-logo {
-    top: 18px;
-  }
-
-  .menuopciones a {
-    font-size: 60px;
-  }
-
-  /* tickets: el ancho fijo de 1140px ya no cabe */
-  .cajas {
-    height: auto;
-    padding: 1px 40px 60px;
-  }
-
-  .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .ticket-main {
-    width: auto;
-    min-width: 0;
-  }
-
-  .ticket-stub {
-    flex: 0 0 140px;
-  }
-
-  .ticket-stub img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  /* confirmación */
-  #fase2 .gracias h1 {
-    font-size: 2.6rem;
-  }
+.oculto {
+  display: none !important;
 }
 
-/* ----------------------------------------------------------
-   TABLET: 600px - 1100px
-   ---------------------------------------------------------- */
-@media (min-width: 600px) and (max-width: 1100px) {
-  :root {
-    --nav-height: 90px;
-    --padding-boton: 8px 22px;
+
+/* responsive */
+
+@media (max-width: 1000px) {
+
+  .tickets-contenido {
+    grid-template-columns: 1fr;
   }
 
-  /* nav */
-  .navbar {
-    padding: 0 20px;
+  .resumen {
+    position: relative;
+    top: auto;
+    order: -1;
   }
 
-  .menu {
-    font-size: 34px;
+  .entradas-lista {
+    order: 2;
   }
 
-  .logo img,
-  .menu-logo img {
-    width: 220px;
-  }
+}
 
-  .menu-cerrar {
-    top: 24px;
-    font-size: 34px;
-  }
 
-  .menu-logo {
-    top: 18px;
-  }
+@media (max-width: 700px) {
 
-  .entradas {
-    font-size: 14px;
-  }
-
-  .menuopciones a {
-    font-size: 52px;
-  }
-
-  /* pasos de compra (siguen fijos bajo el nav, en una fila) */
-  .steps {
-    padding: 12px 30px;
-    gap: 10px;
-  }
-
-  .step {
-    padding: 8px 10px;
-    font-size: 0.7rem;
-  }
-
-  body.fase-3 .steps {
-    padding: 0 30px;
-  }
 
   body.tickets {
-    padding-top: calc(var(--nav-height) + 64px);
+    padding-top:calc(var(--nav-height) + 65px);
   }
 
-  /* tickets */
   .cajas {
-    height: auto;
-    padding: 1px 30px 60px;
+    padding:25px 18px 70px;
   }
 
-  .container {
-    max-width: none;
-    width: 100%;
-    margin: 0;
-  }
-
-  .ticketslista {
-    gap: 36px;
+  .tickets-contenido {
+    gap: 30px;
   }
 
   .ticket,
   .ticket-dia,
   .ticket-bonocopas,
   .ticket-general {
-    gap: 10px;
+    min-height: 0;
   }
 
   .ticket-main {
-    width: auto;
-    min-width: 0;
-    height: auto;
-    min-height: 150px;
-    padding: 16px 22px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 25px 22px;
   }
 
-  .ticket-main h2 {
-    font-size: 1.2rem;
+  .ticket-texto p {
+    font-size: 0.8rem;
   }
 
-  .ticket-main p {
-    grid-column: 1 / -1;
-    font-size: 0.85rem;
+  .controles-ticket {
+    align-self: flex-end;
   }
 
   .ticket-stub {
-    flex: 0 0 110px;
+    flex: 0 0 85px;
     padding: 10px;
   }
 
   .ticket-stub img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    max-height: 70px;
   }
 
-  /* formulario */
+  .resumen {
+    padding: 22px;
+    box-shadow:
+      5px 5px 0 var(--secondary-color);
+  }
+
   #fase1 {
-    height: auto;
-    min-height: calc(100dvh - var(--nav-height));
-    padding: 24px 24px 100px;
+    padding:
+      30px 18px 80px;
   }
 
-  #fase1 .formulario {
-    margin-top: 60px;
-  }
-
-  /* confirmación */
   #fase2 .tarjeta {
-    grid-template-rows: 60% 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      55% 45%;
+
+    grid-template-areas:
+      "imagen"
+      "gracias";
+  }
+
+  #fase2 .codigo {
+    display: none;
   }
 
   #fase2 .gracias {
-    padding-left: 32px;
+    padding:
+      30px 25px;
   }
 
   #fase2 .gracias h1 {
     font-size: 2.2rem;
   }
 
-  #fase2 .gracias p {
-    max-width: 420px;
-    font-size: 0.9rem;
-  }
-
-  #fase2 .codigo {
-    padding: 0 32px 0 16px;
-  }
-
-  /* barra Atrás */
-  .navegacion {
-    padding: 14px 30px;
-  }
-
-  /* footer */
-  .footer {
-    height: auto;
-    padding: 80px 20px 120px;
-  }
-
-  .footer-copy {
-    bottom: 60px;
-  }
-}
-/* para q no se coma la imagen por los lados */
-
-@media (min-width: 600px) and (max-width: 1100px) and (orientation: portrait) {
-  #fase2 .tarjeta {
-    grid-template-rows: auto auto;
-    height: auto;
-    min-height: calc(100dvh - var(--nav-height));
-    overflow: visible;
-  }
-
-  #fase2 .imagenfinal {
-    height: auto;
-  }
-
-  #fase2 .imagenfinal img {
-    width: 100%;
-    height: auto; /* respeta la proporción real */
-    object-fit: contain;
-  }
-
-  #fase2 .gracias {
-    padding: 20px 0 20px 12px;
-  }
-
-  #fase2 .codigo {
-    padding: 40px 32px 40px 16px;
-  }
-}
-
-/* ----------------------------------------------------------
-   MÓVIL: hasta 599px
-   ---------------------------------------------------------- */
-@media (max-width: 599px) {
-  :root {
-    --nav-height: 70px;
-    --radio-boton: 24px;
-    --padding-boton: 7px 18px;
-  }
-
-  /* ---------- nav ---------- */
-  .navbar {
-    padding: 0 16px;
-  }
-
-  .menu {
-    font-size: 28px;
-  }
-
-  .logo img,
-  .menu-logo img {
-    width: 150px;
-  }
-
-  .entradas {
-    font-size: 12px;
-    padding: 7px 14px;
-  }
-
-  /* menú hamburguesa */
-  .menu-cerrar {
-    left: 16px;
-    top: 18px;
-    font-size: 30px;
-  }
-
-  .menu-logo {
-    top: 18px;
-  }
-
-  .menuopciones {
-    margin-left: 16px;
-    margin-top: 16px;
-  }
-
-  .menuopciones a {
-    font-size: 42px;
-    margin-bottom: 12px;
-  }
-
-  /* ---------- pasos de compra ---------- */
-  /* en móvil van dentro del flujo y en 2 filas, como en el prototipo */
-  body.tickets {
-    padding-top: var(--nav-height);
-  }
-
-  .steps {
-    position: static;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px;
-  }
-
-  .step {
-    flex: 1 1 auto;
-    padding: 8px 12px;
-    font-size: 0.7rem;
-  }
-
-  /* en la confirmación flotan sobre la imagen */
-  body.fase-3 .steps {
-    top: calc(var(--nav-height) + 12px);
-    padding: 0 16px;
-  }
-
-  /* ---------- tickets ---------- */
-  .cajas {
-    height: auto;
-    padding: 1px 16px 100px; /* hueco abajo para la barra fija "Atrás" */
-    margin-top: 0;
-  }
-
-  .container {
-    max-width: none;
-    width: 100%;
-    margin: 0;
-  }
-
-  .ticketslista {
-    gap: 24px;
-  }
-
-  .ticket,
-  .ticket-dia,
-  .ticket-bonocopas,
-  .ticket-general {
-    gap: 8px;
-    min-height: 0;
-  }
-
-  /* sin zoom al pasar el dedo */
-  .ticket:hover,
-  .ticket-dia:hover,
-  .ticket-bonocopas:hover,
-  .ticket-general:hover {
-    transform: none;
-  }
-
-  .ticket-main {
-    width: auto;
-    min-width: 0;
-    height: auto;
-    min-height: 110px;
-    padding: 14px 16px;
-    column-gap: 8px;
-    row-gap: 6px;
-  }
-
-  .ticket-main h2 {
-    font-size: 0.85rem;
-    line-height: 1.2;
-  }
-
-  .ticket-main p {
-    grid-column: 1 / -1;
-    font-size: 0.7rem;
-    line-height: 1.4;
-  }
-
-  .btn-add {
-    font-size: 0.65rem;
-    padding: 6px 14px;
-  }
-
-  .ticket-stub {
-    flex: 0 0 76px;
-    padding: 8px;
-  }
-
-  .ticket-stub img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  /* los semicírculos del borde, más pequeños */
-  .ticket-main::before,
-  .ticket-main::after,
-  .ticket-stub::before,
-  .ticket-stub::after {
-    width: 8px;
-    background-size: 8px 12px;
-  }
-
-  /* ---------- formulario ---------- */
-  #fase1 {
-    height: auto;
-    min-height: calc(100dvh - var(--nav-height));
-    margin-top: 0;
-    padding: 16px 16px 100px;
-  }
-
-  #fase1 .formulario {
-    margin-top: 32px;
-  }
-
-  /* 16px evita que iOS haga zoom al tocar un campo */
-  #fase1 input,
-  #fase1 select {
-    font-size: 16px;
-  }
-
-  /* ---------- confirmación ---------- */
-  #fase2 .tarjeta {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "imagen"
-      "gracias"
-      "codigo";
-    height: auto;
-    min-height: calc(100dvh - var(--nav-height));
-    overflow: visible;
-  }
-
-  #fase2 .imagenfinal {
-    height: 260px;
-  }
-
-  #fase2 .gracias {
-    padding: 32px 24px 0;
-  }
-
-  #fase2 .gracias h1 {
-    font-size: 1.7rem;
-  }
-
-  #fase2 .gracias p {
-    max-width: none;
-    font-size: 0.9rem;
-  }
-
-  #fase2 .codigo {
-    padding: 28px 24px 120px;
-  }
-
-  #fase2 .descargapdf {
-    font-size: 0.85rem;
-    font-weight: 800;
-  }
-
-  /* ---------- barra Atrás ---------- */
-  .navegacion {
-    padding: 12px 16px;
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .boton {
-    min-width: 110px;
-    font-size: 0.75rem;
-  }
-
-  /* ---------- footer ---------- */
-  .footer {
-    height: auto;
-    padding: 48px 20px 100px;
-  }
-
-  .footer-redes {
-    gap: 18px;
-  }
-
-  .footer-enlaces {
-    gap: 48px;
-    margin-top: 28px;
-  }
-
-  .footer-copy {
-    position: static;
-    margin-top: 24px;
-    padding: 0 8px;
-  }
-
-  .volver-arriba {
-    bottom: 20px;
-    left: 20px;
-  }
 }
