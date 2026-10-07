@@ -1204,7 +1204,7 @@ img {
 
 /* fase entradas */
 body.tickets {
-  padding-top: calc(var(--nav-height) + 20px);
+  padding-top: var(--nav-height);
 }
 
 .cajas {
@@ -1356,7 +1356,7 @@ body.tickets {
   margin-bottom: 12px;
   font-family: var(--primary-font);
   font-size: clamp(1.3rem, 2vw, 2rem);
-  font-weight: 600;
+  font-weight: 750;
   line-height: 1.05;
 }
 
@@ -1774,6 +1774,7 @@ body.tickets {
 
 #fase1 .btn-confirmar {
   padding: 12px 30px;
+  border: none;
   border-radius: var(--radio-boton);
   background: var(--primary-color);
   color: var(--secondary-color);
@@ -1785,6 +1786,7 @@ body.tickets {
     background-color 0.25s,
     color 0.25s;
 }
+
 
 #fase1 .btn-confirmar:hover {
   background: var(--secondary-color);
@@ -1890,26 +1892,26 @@ body.tickets.fase-3 .navegacion {
 
 
 /* boton atras */
+
+
 .navegacion {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 900;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:16px 50px calc(16px + env(safe-area-inset-bottom, 0px));
+  position: relative;
+  height: 0;
+  padding: 0 50px;
+  margin: 0;
+  z-index: 10;
   pointer-events: none;
 }
 
 .navegacion .boton {
   pointer-events: auto;
+  transform: translateY(-50px);
 }
 
 .boton {
   min-width: 140px;
   padding: var(--padding-boton);
+  border: none;
   border-radius: var(--radio-boton);
   font-family: var(--primary-font);
   font-size: 0.85rem;
@@ -1932,23 +1934,24 @@ body.tickets.fase-3 .navegacion {
   display: none !important;
 }
 
-
 /* responsive */
 
 @media (max-width: 1000px) {
 
   .tickets-contenido {
-    grid-template-columns: 1fr;
-  }
-
-  .resumen {
-    position: relative;
-    top: auto;
-    order: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .entradas-lista {
-    order: 2;
+    width: 100%;
+  }
+
+  .resumen {
+    position: static;
+    width: 100%;
+    margin-top: 0;
   }
 
 }
@@ -1956,17 +1959,29 @@ body.tickets.fase-3 .navegacion {
 
 @media (max-width: 700px) {
 
-
   body.tickets {
-    padding-top:calc(var(--nav-height) + 20px);
+    padding-top: var(--nav-height);
   }
 
   .cajas {
-    padding:25px 18px 70px;
+    padding: 25px 18px 70px;
   }
 
   .tickets-contenido {
     gap: 30px;
+  }
+
+  .entradas-lista {
+    width: 100%;
+  }
+
+  .resumen {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    padding: 22px;
+    box-shadow:
+      5px 5px 0 var(--secondary-color);
   }
 
   .ticket,
@@ -2000,22 +2015,13 @@ body.tickets.fase-3 .navegacion {
     max-height: 70px;
   }
 
-  .resumen {
-    padding: 22px;
-    box-shadow:
-      5px 5px 0 var(--secondary-color);
-  }
-
   #fase1 {
-    padding:
-      30px 18px 80px;
+    padding: 30px 18px 80px;
   }
 
   #fase2 .tarjeta {
     grid-template-columns: 1fr;
-    grid-template-rows:
-      55% 45%;
-
+    grid-template-rows: 55% 45%;
     grid-template-areas:
       "imagen"
       "gracias";
@@ -2026,8 +2032,7 @@ body.tickets.fase-3 .navegacion {
   }
 
   #fase2 .gracias {
-    padding:
-      30px 25px;
+    padding: 30px 25px;
   }
 
   #fase2 .gracias h1 {
