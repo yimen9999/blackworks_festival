@@ -1728,7 +1728,6 @@ body.tickets {
     color 0.25s;
 }
 
-
 #fase1 .btn-confirmar:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
@@ -1792,17 +1791,19 @@ body.tickets.fase-3 .navegacion {
 }
 
 #fase2 .gracias h1 {
+  font-family: var(--secundary-font);
   margin-bottom: 8px;
-  font-size: 3rem;
-  line-height: 1.1;
-  color: var(--white);
+  font-size: 4rem;
+  line-height: 1.25;
+  color: var(--secondary-color);
+  letter-spacing: 0.1em;
 }
 
 #fase2 .gracias p {
   max-width: 600px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--secondary-color);
 }
 
 #fase2 .codigo {
@@ -1833,7 +1834,6 @@ body.tickets.fase-3 .navegacion {
 }
 
 /* boton atras */
-
 
 .navegacion {
   position: fixed;
@@ -1922,8 +1922,7 @@ body.tickets.fase-3 .navegacion {
     width: 100%;
     margin-top: 0;
     padding: 22px;
-    box-shadow:
-      5px 5px 0 var(--secondary-color);
+    box-shadow: 5px 5px 0 var(--secondary-color);
   }
 
   .ticket,
