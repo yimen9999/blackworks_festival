@@ -387,7 +387,7 @@ img {
   font-weight: 800;
   color: var(--secondary-color);
   margin-bottom: 50px;
-  margin-left: 33px;
+  margin-left: 50px;
 }
 
 .merch-galeria {
@@ -1573,7 +1573,7 @@ body.tickets {
   width: 100%;
   margin-top: 20px;
   padding: 15px 18px;
-  border: 3px solid var(--secondary-color);
+  border: none;
   border-radius: var(--radio-boton);
   background: var(--secondary-color);
   color: var(--white);
@@ -1588,17 +1588,10 @@ body.tickets {
 }
 
 .btn-comprar:hover:not(:disabled) {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
-.btn-comprar:disabled {
-  background: #eeeeee;
-  color: #777;
-  border-color: #777;
-  opacity: 0.7;
-  cursor: not-allowed;
-}
+
 
 /* FASE 2 */
 
@@ -1962,10 +1955,8 @@ body.tickets.fase-3 .navegacion {
   .resumen {
     position: static;
     width: 100%;
-    margin-top: 0;
     order: 2;
     padding: 22px;
-    box-shadow: 5px 5px 0 var(--secondary-color);
   }
 
   .ticket,
@@ -2005,7 +1996,6 @@ body.tickets.fase-3 .navegacion {
 
   .resumen {
     padding: 22px;
-    box-shadow: 5px 5px 0 var(--secondary-color);
   }
   #fase1 {
     padding: 30px 18px 80px;
@@ -2148,4 +2138,4 @@ body.tickets.fase-3 .navegacion {
 
     cursor: pointer;
   }
-}
+
