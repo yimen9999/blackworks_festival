@@ -49,7 +49,7 @@
 
       <nav class="menuopciones">
         <a href="tickets.html">TICKETS</a>
-        <a href="#merch">MERCHANDISE</a>
+        <a href="index.html#merch">MERCHANDISE</a>
         <a href="https://blackworks.es/events/">MÁS EVENTOS</a>
         <a href="https://blackworks.es/about-us/">ABOUT</a>
       </nav>
@@ -322,74 +322,93 @@
       </div>
     </section>
 
-    <!-- formulario de compra -->
-    <section class="section" id="fase1">
-      <div class="formulario">
-        <div class="formulario-titulo">
-          <h1>DATOS PERSONALES</h1>
-        </div>
-        <p class="formulario-texto">
-          Introduce tus datos para continuar con la compra.
-        </p>
-        <input
-          type="text"
-          id="nombre"
-          placeholder="Escribe tu nombre y apellidos"
-        />
-        <input
-          type="email"
-          id="correo"
-          placeholder="Escribe tu correo electrónico"
-        />
-        <select id="tipo" aria-label="Tipo de entrada"></select>
-        <div class="compra-resumen">
-          <h2>Tu compra</h2>
-          <div id="resumenformulario"></div>
-        </div>
+<!-- formulario de compra -->
+<section class="section" id="fase1">
 
-        <div class="total">
-          Coste total de las entradas:
-          <span id="preciototal"> 0,00 € </span>
-        </div>
-        <p id="errorform" class="error-form" role="alert"></p>
-        <button type="button" id="confirmar" class="btn-confirmar">
-          CONFIRMAR
-        </button>
-      </div>
-    </section>
+  <div class="formulario">
 
-    <!-- confirmación de compra -->
-    <section class="fase" id="fase2">
-      <div class="tarjeta">
-        <div class="imagenfinal">
-          <img src="img/imagencompra.png" alt="Blackworks" />
-        </div>
-
-        <div class="textofinal">
-          <h3 id="titulofinal"></h3>
-          <div id="datosfinal"></div>
-        </div>
-        <div class="gracias">
-          <h1>YA ESTÁS DENTRO</h1>
-          <p>
-            Tu acceso a BLACKWORKS WEEKEND FESTIVAL está asegurado. Dos días.
-            Una misma frecuencia.
-          </p>
-        </div>
-        <div class="codigo">
-          <img src="img/codigo.png" alt="Código QR" />
-          <button class="descargapdf" type="button">Descargar PDF</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- botones de siguiente-anterior -->
-
-    <div class="navegacion" id="navegacioncompra">
-      <button id="anterior" class="boton" type="button">ATRÁS</button>
+    <div class="formulario-titulo">
+      <h1>DATOS PERSONALES</h1>
     </div>
 
-    <!-- footer -->
+    <p class="formulario-texto">
+      Introduce tus datos para continuar con la compra.
+    </p>
+
+    <input
+      type="text"
+      id="nombre"
+      placeholder="Escribe tu nombre y apellidos"
+    />
+
+    <input
+      type="email"
+      id="correo"
+      placeholder="Escribe tu correo electrónico"
+    />
+
+    <select id="tipo" aria-label="Tipo de entrada"></select>
+
+    <div class="compra-resumen">
+      <h2>Tu compra</h2>
+      <div id="resumenformulario"></div>
+    </div>
+
+    <div class="total">
+      Coste total de las entradas:
+      <span id="preciototal">0,00 €</span>
+    </div>
+
+    <p id="errorform" class="error-form" role="alert"></p>
+
+    <button type="button" id="confirmar" class="btn-confirmar">
+      CONFIRMAR
+    </button>
+
+  </div>
+
+  <div class="navegacion" id="navegacioncompra">
+    <button id="anterior" class="boton" type="button">
+      ATRÁS
+    </button>
+  </div>
+
+</section>
+
+<!-- confirmación de compra -->
+<section class="fase" id="fase2">
+
+  <div class="tarjeta">
+
+    <div class="imagenfinal">
+      <img src="img/imagencompra.png" alt="Blackworks" />
+    </div>
+
+    <div class="gracias">
+      <h1>YA ESTÁS DENTRO</h1>
+      <p>
+       Tu acceso a BLACKWORKS WEEKEND FESTIVAL está asegurado. 
+       Prepárate para una experiencia de hard techno, newstyle, raw y uptempo.
+      </p>
+    </div>
+
+    <div class="textofinal">
+      <h3 id="titulofinal"></h3>
+      <div id="datosfinal"></div>
+    </div>
+
+    <div class="codigo">
+      <img src="img/codigo.png" alt="Código QR" />
+      <button class="descargapdf" type="button">
+        Descargar PDF
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- footer -->
 
     <footer class="footer">
       <div class="footer-redes">
