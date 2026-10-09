@@ -206,6 +206,9 @@ img {
   margin-top: 10px;
 }
 
+.entradas-home {
+  display: none;
+}
 /* CARRUSEL TICKETS */
 
 .ticketscarrusel {
@@ -911,6 +914,23 @@ img {
   .home-texto p:last-child {
     font-size: 14px;
   }
+  .entradas-home {
+    display: inline-block;
+    margin-top: 22px;
+    padding: var(--padding-boton);
+    border-radius: var(--radio-boton);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.2s;
+  }
+
+  .entradas-home:active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
 
   /* NAVBAR */
 
@@ -1591,8 +1611,6 @@ body.tickets {
   color: var(--primary-color);
 }
 
-
-
 /* FASE 2 */
 
 body.tickets.fase-2 {
@@ -1652,7 +1670,6 @@ body.tickets.fase-2 {
   font-family: var(--primary-font);
   font-size: 0.8rem;
 }
-
 
 /* SELECT OCULTO */
 
@@ -1772,7 +1789,6 @@ body.tickets.fase-3 .navegacion {
   color: var(--secondary-color);
 }
 
-
 /* ================================================= */
 /* IMAGEN */
 /* ================================================= */
@@ -1793,7 +1809,6 @@ body.tickets.fase-3 .navegacion {
   object-fit: cover;
   object-position: center;
 }
-
 
 /* ================================================= */
 /* YA ESTÁS DENTRO */
@@ -1833,8 +1848,6 @@ body.tickets.fase-3 .navegacion {
   color: var(--secondary-color);
 }
 
-
-
 /* DATOS DE LA ENTRADA */
 
 #fase2 .textofinal {
@@ -1857,7 +1870,6 @@ body.tickets.fase-3 .navegacion {
   line-height: 1.4;
   font-weight: 500;
 }
-
 
 /* QR + PDF */
 
@@ -1893,7 +1905,6 @@ body.tickets.fase-3 .navegacion {
 #fase2 .descargapdf:hover {
   text-decoration: underline;
 }
-
 
 /* ================================================= */
 /* BOTÓN ATRÁS */
@@ -1934,21 +1945,17 @@ body.tickets.fase-3 .navegacion {
   color: var(--primary-color);
 }
 
-
-
 .oculto {
   display: none !important;
 }
 
 /* responsive */
 
-
 /* -------------------------------- */
 /* PANTALLAS DE 1000 PX O MENOS     */
 /* -------------------------------- */
 
 @media (max-width: 1300px) {
-
   .tickets-contenido {
     display: flex;
     flex-direction: column;
@@ -2025,7 +2032,6 @@ body.tickets.fase-3 .navegacion {
     width: 100%;
     padding: 20px 45px 40px;
   }
-
 }
 
 /* -------------------------------- */
@@ -2033,7 +2039,6 @@ body.tickets.fase-3 .navegacion {
 /* -------------------------------- */
 
 @media (max-width: 800px) {
-
   body.tickets {
     padding-top: calc(var(--nav-height) + 40px);
   }
@@ -2089,7 +2094,6 @@ body.tickets.fase-3 .navegacion {
     max-height: 70px;
   }
 
-
   /* ------------------------------ */
   /* FASE 2 - DATOS PERSONALES      */
   /* ------------------------------ */
@@ -2101,7 +2105,6 @@ body.tickets.fase-3 .navegacion {
   #fase1 {
     padding: 30px 18px 80px;
   }
-
 
   /* ------------------------------ */
   /* FASE 3 - CONFIRMACIÓN          */
@@ -2124,7 +2127,6 @@ body.tickets.fase-3 .navegacion {
     overflow: visible;
   }
 
-
   /* IMAGEN */
 
   #fase2 .imagenfinal {
@@ -2145,7 +2147,6 @@ body.tickets.fase-3 .navegacion {
     object-fit: cover;
     object-position: center;
   }
-
 
   /* YA ESTÁS DENTRO */
 
@@ -2175,7 +2176,6 @@ body.tickets.fase-3 .navegacion {
     font-weight: 500;
   }
 
-
   /* DATOS DE LA ENTRADA */
 
   #fase2 .textofinal {
@@ -2201,7 +2201,6 @@ body.tickets.fase-3 .navegacion {
     line-height: 1.5;
     font-weight: 500;
   }
-
 
   /* QR + DESCARGAR PDF */
 
